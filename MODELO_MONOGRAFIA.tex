@@ -1,3 +1,4 @@
+%Krishna Ferreira Xavier, tsixav@gmail.com
 \documentclass[ruledheader,noindentfirst,anapcustomindent,abntfigtabnum,tocpage=plain]{abnt}
 \usepackage{amsmath, amssymb, amsthm, verbatim, amsfonts, amstext}
 %\usepackage[latin1]{inputenc}
@@ -24,6 +25,7 @@
 \usepackage{indentfirst}
 \usepackage{color}
 \usepackage{icomma}
+\usepackage[table,xcdraw]{xcolor}
 
 \sloppy
 
@@ -82,14 +84,8 @@
 %%%%%%%%%%%%%Arquivos .tex com os elementos pré-textuais
 %
 \include{capa}
-\include{folharosto}
-\include{folhadeaprovacao}
-\include{dedicatoria}
-\include{agradecimentos}
-\include{epigrafe}
 \pagestyle{plain}%%%%% Utilizar ESTILO PLAIN AQUI%%%%%%%
-\include{resumo}
-\include{abstract}
+\include{resumo-abstract}
 
 %%%Comandos para criação automática das listas
 %
@@ -99,12 +95,23 @@
 
 %%%Comandos para criar outras listas não suportadas pelo pacote ABNTex%%%
 %
-\pretextualchapter{Lista de Símbolos}
-\input{nomenclatura}
-\newpage
 
-\pretextualchapter{Lista de Abreviacoes}
-\input{abreviacoes}
+
+\pretextualchapter{Lista de Abreviações}
+\begin{basedescript}{\desclabelstyle{\pushlabel}\desclabelwidth{6em}}
+\item[{VC}] Visão Computacional%
+\item[{PDI}] Processamento Digital de Imagens%
+\item[{IA}] Inteligência Artificial%
+\item[{GP}] Geometria Projetiva%
+\item[{TA}] Tecnologia Assistiva%
+\item[{IBGE}] Instituto Brasileiro de Geografia e Estatísticas%
+\item[{TICs}] Tecnologias  da Informação e Comunicação%
+\item[{IHC}] Interação Humano Computador%
+\item[{UML}] Unified Modeling Language%
+\item[{MVP}] Minimum Viable Product%
+\item[{XML}] eXtensible Markup Languag%
+\item[{TZNM}] Técnica de Zona Neutra e de Movimento
+\end{basedescript}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -124,20 +131,18 @@
 %\fancyhead[CO]{\large\slshape\rightmark}%
 
 
+
 %%% Outros arquivos .tex. É acoselhável utilizar vários arquivos, pelo menos um por capítulo
-\include{introducao}
-\include{cap2}
-\include{cap3}
-\include{cap4}
-\include{cap5}
+\include{CAPITULOS}
 
-
-%%%% Estilo de citação ABNT e arquivo de bibitens (mybibliography.bib)
-\bibliographystyle{abnt-alf}
-\bibliography{mybibliography}
 
 \apendice
-\include{appendices}
 
+%%%% Estilo de citação ABNT e arquivo de bibitens (mybibliography.bib)
+%https://github.com/magsilva/abntex
+\bibliographystyle{abnt-alf}
+\bibliography{sigproc}
+
+\include{appendices}
 
 \end{document}
