@@ -21,13 +21,19 @@ O ininterrupto desenvolvimento de novas tecnologias, softwares e hardwares conce
 
 O conceito de TA, apesar de recente, pode ser definido como o conjunto de sistemas, tecnologias e inovações que permitem aumentar as habilidades funcionais de uma pessoa com algum tipo de deficiência e, desta forma, possibilitar sua inclusão. Segundo \citeonline{Bersch}, o objetivo de TA é proporcionar à pessoa com deficiência maior independência, qualidade de vida e inclusão social, através da ampliação de sua comunicação, mobilidade, controle de ambiente, habilidades de aprendizado, trabalho e integração com a família, amigos e sociedade.
 
-O grande desafio de criar as condições necessárias à acessibilidade das Tecnologias da Informação e Comunicação (TICs) por pessoas com deficiência, transformando a interação desses usuários o mais simples possível, é presente dentro da área de Interação Humano Computador (IHC). É evidente que as características humanas e os estilos de interação são fatores determinantes no modo como é feita a interação com as TICs através das tecnologias.
+O grande desafio de criar as condições necessárias à acessibilidade das Tecnologias da Informação e Comunicação (TICs) por pessoas com deficiência, transformando a interação desses usuários o mais simples possível, é presente dentro da área de Interação Humano-Computador (IHC). É evidente que as características humanas e os estilos de interação são fatores determinantes no modo como é feita a interação com as TICs através das tecnologias.
 
-Tendo em vista os fatores já citados, as motivações pessoais e as áreas de interesse como TA, Visão Computacional (VC) e Processamento Digital de Imagens (PDI), motivou o desenvolvimento do VisiUMouse, que é  uma tecnologia que permitir o uso de um computador  por pessoas com algum tipo de deficiência físico motora por meio do rastreamento dos movimentos dos olhos através da entrada de vídeo da \textit{webcam}, utilizando os conceitos e premissas da VC. Possibilitando o uso desta tecnologia para qualquer pessoa no mundo por meio de download do \textit{Software} disponível em um repositório público e gratuito.
+Tendo em vista os fatores já citados, as motivações pessoais e as áreas de interesse como TA, Visão Computacional (VC) e Processamento Digital de Imagens (PDI), motivou o desenvolvimento do VisiUMouse, que é  uma tecnologia que permitir o uso de um computador  por pessoas com algum tipo de deficiência físico motora por meio do rastreamento dos movimentos dos olhos através da entrada de vídeo da \textit{webcam}, utilizando os conceitos e premissas da VC. Possibilitando o uso desta tecnologia para qualquer pessoa no mundo por meio de download do \textit{Software} disponível em um repositório público e gratuito \footnote{http://SITE }.
+%% REVDEIA 1: coloca o site como nota de rodapé, assim: \footnote{REVDEIA: http://  COLOCAR AQUI O SITE } .
 
-VC é a área da ciência que desenvolve teorias e métodos voltados à extração automática de informações úteis contidas em imagens. O objetivo dessa ciência é criar transmitir essas informações às máquinas de forma compreensível.
+%% REVDEIA 2: Não inicia frases com siglas, escreva por extenso
 
-O restando do trabalho esta organizado da seguinte forma: o Capítulo \ref{CAP2} apresenta a fundamentação teórica para o leitor(a) para compreensão do restando do trabalho, o Capítulo \ref{CAP3} relata a Metodologia utilizada, o Capítulo \ref{CAP4} apresenta o desenvolvimento da aplicação desenvolvida, o Capítulo \ref{CAP5} descreve a modelagem do VisiUMouse, o Capítulo \ref{CAP6} expõe os conceitos do Desgin utilizados, o Capítulo \ref{CAP7} refere-se aos experimentos realizados com o VisiUMouse e seus resultados. 
+%% REVDEIA 3: AQUI FALTA A REFERÊNCIA SOBRE VISÃO COMPUTACIONAL
+Visão Computacional  é a área da ciência que desenvolve teorias e métodos voltados à extração automática de informações úteis contidas em imagens \cite{prince2012computer}. O objetivo dessa ciência é criar transmitir essas informações às máquinas de forma compreensível.
+
+
+%% REVDEIA 4: PEÇA PARA ALGUÉM LER TEU TRABALHO EM VOZ ALTA, FACILITA PARA ENCONTRAR OS ERROS , COMO POR EXEMPLO: Restando do trabalho.... esta irei alterar, mas não conseguirei fazer em todo
+O restante do trabalho esta organizado da seguinte forma: o Capítulo \ref{CAP2} apresenta a fundamentação teórica, o Capítulo \ref{CAP3} descreve a Metodologia utilizada, o Capítulo \ref{CAP4} apresenta o desenvolvimento da aplicação desenvolvida, o Capítulo \ref{CAP5} apresenta a modelagem do VisiUMouse, o Capítulo \ref{CAP6} expõe os conceitos de Design utilizados, o Capítulo \ref{CAP7} refere-se aos experimentos de avaliação realizados com o software VisiUMouse e faz uma análise de seus resultados. 
 %------------------------------------------------------------------
 
 %novo
@@ -36,7 +42,9 @@ O restando do trabalho esta organizado da seguinte forma: o Capítulo \ref{CAP2}
 % \chapter{PANORAMA DA DEFICIÊNCIA FISICO-MOTORA, TECNOLOGIA ASSISTIVA E POTENCIAL DA VISÃO COMPUTACIONAL}
 \label{CAP2}
 
-Esse Capítulo apresenta os conceitos teóricos de TA e VC e as motivações para o trabalho apresentado. A evolução contínua e exponencial das tecnologias possibilitam cada vez mais a criação e melhorias de em vários âmbitos sociais, digitais, acadêmicos e profissionais. O qual cada indivíduo tem acesso a um arsenal de conhecimento imensurável, na \textit{internet}, como a grande quantidade de artigos e pesquisas acadêmicas publicados diariamente e o desenvolvimento e distribuição continuo de \textit{softwares} de código aberto. É evidente o crescimento das possibilidades em todas as áreas de conhecimento com a revolução da informação, representado um novo modelo de mundial para todas as pessoas.
+%Esse Capítulo apresenta os conceitos de TA e VC e as motivações para o trabalho apresentado. 
+
+A evolução contínua e exponencial das tecnologias possibilitam cada vez mais a criação e melhorias de em vários âmbitos sociais, digitais, acadêmicos e profissionais. O qual cada indivíduo tem acesso a um arsenal de conhecimento imensurável, na \textit{internet}, como a grande quantidade de artigos e pesquisas acadêmicas publicados diariamente e o desenvolvimento e distribuição continuo de \textit{softwares} de código aberto. É evidente o crescimento das possibilidades em todas as áreas de conhecimento com a revolução da informação, representado um novo modelo de mundial para todas as pessoas.
 % * <rafael.cardoso@gmail.com> 2018-04-14T17:52:26.552Z:
 % 
 % > O qual cada indivíduo tem acesso a um arsenal de conhecimento imensurável, na \textit{internet}, como a grande quantidade de Artigos e pesquisas acadêmicas publicados diariamente e o desenvolvimento e distribuição continuo de \textit{softwares} de código aberto.
@@ -46,9 +54,10 @@ Esse Capítulo apresenta os conceitos teóricos de TA e VC e as motivações par
 
 
 \section{TECNOLOGIA ASSISTIVA}\label{Sub:ta-brasil}
-Os recursos e serviços que contribuem para proporcionar ou ampliar habilidades funcionais de pessoas com deficiência e consequentemente promover vida independente e inclusão é determinado de TA, que é uma expressão nova, que se refere a um conceito ainda em pleno processo de construção e sistematização. A utilização de recursos de TA, entretanto, remonta aos primórdios da história da humanidade ou até mesmo da pré-história. Qualquer pedaço de pau utilizado como uma bengala improvisada, por exemplo, caracteriza o uso de um recurso de TA. \cite{galvao2009tecnologia-UPPERCASE}.
 
-Usuário com deficiência encontra grande dificuldade em utilizar um computador pessoal, pelo fato de ser controlado basicamente apenas pelo movimento das mãos, membros estes dos quais podem ter sido atendidos pela deficiência, privando o usuário de mobilidade. Este motivo incapacita a utilização de dispositivos de entrada tradicionais, como o \textit{mouse} e teclado. Para esse usuário uma tarefa simples de navegar na \textit{internet} para estudar se torna um desafio intangível, atenuado apenas pelas TA disponíveis no mercado. São poucas as tecnologias que dão suportem a casos onde o usuário tem apenas o controle do movimento da cabeça. Em muitos destes casos a pessoa deficiente possui as faculdades mentais intactas.
+Tecnologia Assistiva pode ser considerada como recursos e serviços que contribuem para proporcionar ou ampliar habilidades funcionais de pessoas com deficiência e consequentemente promover vida independente e inclusão. O termo TA, que é uma expressão nova, e se refere a um conceito ainda em pleno processo de construção e sistematização. A utilização de recursos de TA, entretanto, remonta aos primórdios da história da humanidade ou até mesmo da pré-história. Qualquer pedaço de pau utilizado como uma bengala improvisada, por exemplo, caracteriza o uso de um recurso de TA. \cite{galvao2009tecnologia-UPPERCASE}.
+
+As pessoas com deficiência motora (membros superiores) encontram, ainda, grande dificuldades em utilizar um computador pessoal, pelo fato de que os dispositivos padrão de interação são controlados basicamente apenas pelo movimento das mãos. Este motivo incapacita a utilização de dispositivos de entrada tradicionais, como o \textit{mouse} e teclado. Para essas pessoas uma tarefa simples de navegar na \textit{internet} para estudar se torna um desafio intangível, atenuado apenas pelos poucos, e caros, dispositivos de TA disponíveis no mercado. São poucas as tecnologias que dão suporte a casos onde o usuário tem apenas o controle do movimento da cabeça. Em muitos dos casos de deficiência motora, como por exemplo a ELA (Esclerose Lateral Amiotrófica), deficiência causada por acidente, paralisia cerebral, essas pessoas possuem as faculdades mentais intactas.
 % * <rafael.cardoso@gmail.com> 2018-04-14T18:09:28.796Z:
 % 
 % > tipo de usuário
@@ -56,9 +65,18 @@ Usuário com deficiência encontra grande dificuldade em utilizar um computador 
 % 
 % ^.
 
-Para esse usuário tarefas simples, como navegar na \textit{internet} e escrever um trabalho, podem se tornar um desafio, amenizado apenas pelas TA disponíveis no mercado. Poucas Tecnologias abrangem casos em que existe a perda completa do movimento dos membros. Nestes casos específicos de deficiência, normalmente, a única parte do corpo que o usuário consegue movimentar livremente é a cabeça e consequentemente os olhos.
+%% REVDEIA 5: TODO ESTE PARÁGRAFO ABAIXO ESTÁ REPETIDO
 
-Estes fatos possibilitam que o usuário interaja com o seu ambiente apenas com a cabeça, como falar com pessoas. Essa condição determina que para ele utilizar um dispositivo eletrônico ele pode usar essencialmente a cabeça. Isto é o computador ou dispositivo precisa entender as expressões da cabeça e seus elementos, como boca, nariz e olhos, além da fala. Considerando estes fatos podemos citar três tipos de entrada de dados. A entrada de vídeo, onde o usuário estará disposto na frente de uma câmera como a \textit{webcam}. A entrada de áudio, onde o usuário vai precisar ter um microfone. E por fim a entrada de contato físico, onde o usuário vai precisar apertar botões.
+%Para esse usuário tarefas simples, como navegar na \textit{internet} e escrever um trabalho, podem se tornar um desafio, amenizado apenas pelas TA disponíveis no mercado. Poucas Tecnologias abrangem casos em que existe a perda completa do movimento dos membros. Nestes casos específicos de deficiência, normalmente, a única parte do corpo que o usuário consegue movimentar livremente é a cabeça e consequentemente os olhos.
+
+
+%% REVDEIA 6: DEI UMA REESCRITA NESTE PARÁGRAFO ABAIXO
+Estes fatos permitem que essas pessoas interajam com o seu ambiente de outras maneiras não convencionais, com os movimentos ainda restantes, e como os movimentos da cabeça são, os que nestes casos, permanecem funcionais, são movimentos que podem ser explorados para uma possível maneira de interação com o computador.
+Isto é, o precisa haver um dispositivo de TA, de entrada, que capte os movimentos da cabeça (como rotação e flexão) e seus elementos, como boca, nariz e olhos, além da fala. 
+
+%% REVDEIA 7: COLOCA NA FORMA DE ITENS 
+Considerando estes fatos podemos citar três tipos de entrada, alternativos. 
+A entrada de vídeo, onde o usuário estará disposto na frente de uma câmera como a \textit{webcam}. A entrada de áudio, onde o usuário vai precisar ter um microfone. E por fim a entrada de contato físico, onde o usuário vai precisar apertar botões ou switchs.
 
 % * <tsixav@gmail.com> 2018-04-17T01:00:16.483Z:
 % 
@@ -77,13 +95,15 @@ Estes fatos possibilitam que o usuário interaja com o seu ambiente apenas com a
 % ^ <tsixav@gmail.com> 2018-04-17T01:00:07.911Z.
 
 \section{VISÃO COMPUTACIONAL}\label{Sub:vc}
+
 Visão Computacional é uma subárea da Inteligência Artificial (IA) que tem como objetivo dar significado as imagens digitais com base em análise. Esta análise procura extrair algum conhecimento da representação matricial das imagens, segundo \citeonline{prince2012computer}. 
 
+%% COLOCA NA FORMA DE ITENS - E NÃO TENS COMO CITAR REFERÊNCIA DE CADA UM
 São alguns exemplos referentes a área de VC: a estimativa de segmentação e de movimento, reconstrução de fotografias para a criação de modelos tridimensionais, como rostos humanos, análise de segmentação, reconhecimento de objetos orgânicos e inorgânico e rastreamento de alvos. Estes desafios tornam-se complexos pelo fato das imagens digitais serem apenas visíveis para o computador, frequentemente são estrutura de dados no formato de matrizes de distribuição de pontos e também pelo fato de não armazenarem informações sobre a cena representada pela imagem, isto é meta dados, de acordo com \citeonline{prince2012computer}.
 
-Um dos grandes desafios da área de VC é a detecção e rastreamento de alvos, principalmente por sua aplicação em sistemas de vigilância de vídeo, análise de atividade humana, monitoramento de tráfego urbano e rural, rastreamento de animais e robótica autônoma. A análise de atividade humana ganha destaque quando possibilita uma automatização ou facilitação de uma atividade, como utilizar o computador todos os dias. \cite{alaya2012multipeople-UPPERCASE}.
+Um dos grandes desafios da área de VC é a detecção e rastreamento de alvos, principalmente por sua aplicação em sistemas de vigilância de vídeo, análise de atividade humana, monitoramento de tráfego urbano e rural, rastreamento de animais e robótica autônoma. A análise de atividade humana ganha destaque quando possibilita uma automatização ou facilitação de uma atividade, como utilizar o computador todos os dias \cite{alaya2012multipeople-UPPERCASE}.
 
-Visando melhorar os problemas citados anteriormente, a área de VC utiliza de reconhecimento de padrões, aprendizado de máquina (\textit{machine learning}), Geometria Projetiva (GP), PDI e teoria dos grafos \citeonline{prince2012computer}. E comumente visto em aplicações de redes sociais como o reconhecimento de amigos em uma foto do Facebook ou em zoom automático em fotos com muitos rotos, a Figura \ref{fig:exemplo-vc} mostra um exemplo de múltiplos reconhecimento (retângulos verdes) em um mesmo instante.
+Visando solucionar os problemas citados anteriormente, a área de VC utiliza de reconhecimento de padrões, aprendizado de máquina (\textit{machine learning}), Geometria Projetiva (GP), PDI e teoria dos grafos \cite{prince2012computer}. É comumente visto em aplicações de redes sociais como o reconhecimento de amigos em uma foto do Facebook ou em zoom automático em fotos com muitos rostos, a Figura \ref{fig:exemplo-vc} ilustra um exemplo de múltiplos reconhecimentos de rostos (retângulos verdes) em um mesmo instante.
 
 \begin{figure}[htbp]
 \caption{Exemplo de aplicação de Visão Computacional para o reconhecimento de rostos.}
@@ -92,32 +112,42 @@ Visando melhorar os problemas citados anteriormente, a área de VC utiliza de re
 \label{fig:exemplo-vc}
 \end{figure}
 
-Considerando três tipos de entrada de dados comuns como vídeo, áudio e contato físico é possível analisar que a entrada de vídeo possibilita uma interseção mais natural, considerando que o movimento da cabeça deve ser similar ao movimento da mão quando um usuário sem deficiência utiliza o \textit{mouse}.
+Considerando três tipos de entrada de dados comuns, como vídeo, áudio e toque é possível analisar que a entrada de vídeo possibilita uma interseção mais natural, considerando que o movimento da cabeça deve ser similar ao movimento da mão quando um usuário sem deficiência utiliza o \textit{mouse}.
 
-Um vídeo pode ser considerado um conjunto de imagens digitais, que é uma representação numérica de uma imagem bidimensional em forma binário, tornando possível o armazenamento, transferência, processamento ou reprodução por meios eletrônicos. Existe dois tipos de imagens, as imagens de rastreio (ou \textit{raster}) e as imagens do tipo vetorial.
+%% REVDEIA 8: também é da mesma referência de VC ? aqui quando defines os tipos de imagens precisa inserir referência, de onde tiraste? compreendes?
+Um vídeo pode ser considerado um conjunto de imagens digitais, que é uma representação numérica de uma imagem bidimensional, em forma binário, tornando possível o armazenamento, transferência, processamento ou reprodução por meios eletrônicos. Existe dois tipos de imagens, as imagens de rastreio (ou \textit{raster}) e as imagens do tipo vetorial.
 
-As imagens de rastreio são representadas de forma matricial pelo computador, onde há uma correspondência "bit-a-bit" da matriz que representa a imagem como o que está sendo reproduzido de fato tela. A resolução de uma imagem defini a sua matriz, então uma imagem de 1024x720 tem 737280 posições em uma matriz. As matrizes deste tipo não possuem nem um tipo de dados adicionais como o que existem na imagem ou que tipo de objetos ele representa. A representação e extração destes dados é tarefa da área de VC, que tem como objeto dar significado semântico para imagens digitais através do processamento delas, de acordo com \citeonline{prince2012computer}. Uma das técnicas para detectar objetos em uma imagem digital é o algoritmo de Viola-Jones, que foi utilizado no VisiUMouse.
+As imagens de rastreio são representadas de forma matricial pelo computador, onde há uma correspondência "bit-a-bit" da matriz que representa a imagem como o que está sendo reproduzido de fato na tela. A resolução de uma imagem define a sua matriz, então uma imagem de 1024x720 tem 737280 posições em uma matriz. 
+
+As matrizes deste tipo não possuem nem um tipo de dados adicionais como o que existem na imagem ou que tipo de objetos ele representa. A representação e extração destes dados é tarefa da área de VC, que tem como objeto dar significado semântico para imagens digitais através do processamento delas, de acordo com \citeonline{prince2012computer}. Uma das técnicas para detectar objetos em uma imagem digital é o algoritmo de Viola-Jones.
 
 \subsection{Conceito de Viola-Jones}
+
+%% REVDEIA 9 : LER EM VOZ ALTA E CORRIGIR : ..., acurácia do classificado e ... ? ? ?  NÃO ENTENTI
+
 O algoritmo de Viola-Jones para a identificação de objeto é um algoritmo proposto para o reconhecimento de objetos em imagens digitais, e tem como característica o alto desempenho de processamento e o alto indicie de assertividade, podendo chegar até a 99,7\% dependendo do número de etapas treinadas, acurácia do classificado e objeto para qual foi treinado, segundo \citeonline{viola2001rapid}. O qual trabalha com algoritmo em cascata que se utiliza de arquivos de padrões e características chamados de \textit{haar features}. Estas características são organizadas em uma estrutura de árvore em XML.
 
 \subsection{Machine Learning}
+
 \textit{Machine Learning} é utilizada para reconhecer padrões em um grupo de dados, como exemplo podemos citar os padrões que boa parte dos rostos humanos apresentam. Segundo \citeonline{samuel1959some}, podemos definir \textit{Machine Learning} como o campo de estudo que dá aos computadores a habilidade de aprender sem serem explicitamente programados. O aprendizado explora o estudo e construção de algoritmos que podem aprender de seus erros e fazer previsões sobre dados, esses algoritmos operam construindo um modelo a partir de entrada de dados amostrais com o objetivo de fazer previsões ou decisões guiadas pelos dados.
 
 \chapter{METODOLOGIA}\label{CAP3}
 
 Podemos dizer que metodologia é a explicação detalhada e exata de toda ação desenvolvida no (caminho) do trabalho. É a explicação do tipo de pesquisa, dos instrumentos utilizados, do tempo previsto, da equipe de pesquisadores e da divisão do trabalho, das formas de tabulação e tratamento dos dados, enfim, de tudo aquilo que se utilizou no trabalho de pesquisa, de acordo com \citeonline{miner2012mapreduce}.
 
-O objetivo geral do trabalho é desenvolver uma TA com base em VC que permita um usuário com deficiência físico motora (principalmente os membros superiores) consiga controlar o seu computador apenas com o movimento da cabeça (usando os olhos como pontos de referência), através da manipulação do movimento e cliques do \textit{mouse}.
+O objetivo geral do trabalho é desenvolver uma TA com base em VC que permita uma pessoa com deficiência físico motora (principalmente os membros superiores) consiga controlar o seu computador apenas com o movimento da cabeça (usando os olhos como pontos de referência), através da manipulação do movimento e cliques do \textit{mouse}.
+
+%% REVDEIA 10: FAZER EM FORMA DE ITENS
 
 Entre os objetivos específicos podemos citar: o desenvolvimento do VisiUMouse para multiplataformas; desenvolvimento do site do VisiUMouse onde será possível fazer o \textit{download} dele de forma gratuita, entre outras funcionalidades; garantir que os mecanismos de busca dos navegadores modernos achem ele pela busca da palavra "VisiUMouse"; desenvolver um instalador; garantir que o VisiUMouse tenha as principais funcionalidade de um \textit{mouse} tradicional; criar uma interface de configuração amigável e de utilização simples.
 
-Para isto foi necessário fazer uma pesquisa de possíveis Tecnologias, estudos relacionados e teste para determinar a viabilidade do desenvolvimento dos objetivos propostos.
+Para isto foi necessário fazer uma pesquisa de possíveis TA, estudos relacionados e testes avaliativos para determinar a viabilidade do desenvolvimento dos objetivos propostos.
     
 \section{TRABALHOS RELACIONADOS}\label{Sub:trabalhos-relacionados}
-Existem vários tipos de  \textit{software} de TA, e a seguir são apresentados um resumo de alguns dos \textit{softwares} difundidos no meio. Parte dos \textit{softwares} de TA são utilizados para a comunicação com outras pessoas, geralmente o seu responsável, porém existem outros \textit{softwares} que tem como objetivo a independência que permite que seus usuários exerçam atividades sozinhos ou com pouca ajuda.
 
-Foi feito um Mapeamento Sistêmico com cerca de 2000 artigos, os quais produziram outros trabalhos, os quais foram utilizados como referência para o levantamento dos Trabalhos Relacionados. \cite{da2018best-UPPERCASE}.
+Existem vários tipos de  \textit{software} de TA, e a seguir são apresentados alguns dos \textit{softwares}. Parte dos \textit{softwares} de TA são utilizados para a comunicação com outras pessoas, geralmente o seu responsável, porém existem outros \textit{softwares} que tem como objetivo a independência que permite que seus usuários exerçam atividades sozinhos ou com a mínima ajuda possível, ou seja, forneça autonomia.
+
+Foi feito um Mapeamento Sistêmico com cerca de 2000 artigos, os quais buscamos outros trabalhos, que foram utilizados como referência para o levantamento dos Trabalhos Relacionados. \cite{da2018best-UPPERCASE}.
 
 Existem diversos projetos, produtos e estudos em TA, baseados na VC, que utilizam-se de \textit{softwares} para detecção de objetos através de uma \textit{webcam} \cite{ramos2016letras} , \cite{gips2000camera}, \cite{bian2016facial}, \cite{marnik2014blinkmouse}. A detecção dos movimentos nesses projetos é feita através de uma entrada de vídeo que rastreia várias partes do corpo humano, sendo que a mais comum é o rastreamento de movimentos da cabeça (\textit{video-based}). \cite{al2013eye-UPPERCASE}. 
 
@@ -138,6 +168,7 @@ Dentre os softwares similares este é o mais semelhante a Tecnologia VisiUMouse,
 \end{figure}
 
 \subsection{HeadDev}
+
 O projeto HeadDev \citeonline{alvesferramentas} é semelhante ao CameraMouse, porém faz o rastreamento apenas dos movimentos da cabeça, não permitindo configurar o objeto que o \textit{software} deve rastrear. Seu funcionamento também utiliza a técnica de espelhamento.
 
 HeadDev é um software gratuito para IHC sem o uso das mãos, cabos, sensores ou outro dispositivo. A interação é feita com uma \textit{webcam} USB padrão, que reconhece os movimentos do rosto. Ele destina-se a pessoas com deficiência motora grave (esclerose lateral amiotrófica, esclerose múltipla, paralisia cerebral, lesão medular e distrofia muscular), porque o sistema só utiliza os movimentos do nariz ou face como ponteiro do \textit{mouse} em um teclado virtual na tela do computador para fazer os eventos de um \textit{mouse}.
@@ -147,16 +178,28 @@ HeadDev é um software gratuito para IHC sem o uso das mãos, cabos, sensores ou
 Facial Mouse é uma interface de IHC para as pessoas com tetraplegia baseada em uma câmera de profundidade de infravermelho monocular. A posição do nariz junto com a boca é detectado para o controle e navegação do cursor do \textit{mouse}. O algoritmo utilizado para rastrear é baseado em uma árvore melhorada de decisão aleatória que é capaz de detectar a informação facial de forma eficiente e com precisão. Com isso é possível uma experiência melhor para o usuário, tornando mais confortável o alcance do movimento do nariz para o movimento do cursor através de uma função não-linear. A câmera de profundidade infravermelha permite o sistema ser independente de iluminação e mudanças de cor tanto o fundo e no rosto humano, o que é uma vantagem crítica sobre as opções baseadas em câmera RGB \citeonline{bian2016facial}.
 
 \subsection{Facial Human-Computer Interface}
+
 Já o \textit{softwares} Facial Human-Computer Interface \citeonline{antunes2016intelligent}, tem como objetivo aplicar o modo de interação feita pelo CameraMouse, refinando a funcionalidade do clique, principalmente nos requisitos de precisão e configuração.
 
 O Facial Human-Computer Interface é um sistema com IHC, que permite uma comunicação mais natural com as máquinas, seu publico alvo são pessoas idosas e deficientes. Ele apresenta um sistema baseado em visão e recurso para detecção de piscadas voluntárias longas e interpretação de padrões de piscada para comunicação entre homem e máquina. Complementado pelo mecanismo de detecção de múltiplos piscadas de olho, além disso oferece uma solução completa para a construção de dispositivos de entrada inteligentes com viva voz. A técnica utilizada para rastrear utiliza câmeras automáticas que permitem rastrear as características do nariz, sobrancelhas e a posição da cabeça de forma robusta e precisa nas coordenadas 2D e 3D. Esse rastreamento e monitoramento permitem que o usuário forneça dados para a máquina do computador e acesse todo o sistema de uma maneira livre, de acordo com \citeonline{parmar2012facial}. 
 
+
+
+%% REVDEIA 11: aqui precisa ser um subcapítulo, precisas desvincular do FHCI
+%% TALVEZ LEVA O RESTANTE DO TEXTO LÁ PARA O CAPÍTULO REFERENTE AO VISIUMOUSE
+
+
 Baseado nos trabalhos relacionados percebe-se a utilização dos conceitos de VC e o uso da OpenCV, com a técnica de espelhamento do movimento e rastreamento da face principalmente. 
+
+
 
 \textbf{Nesse contexto o VisiUMouse tem como um dos objetivos implementar uma técnica de movimento alternativa, batizada de Técnica de Zona Neutra e de Movimento (TZNM) \citeonline{xavier2017visiumouse}, com o rastreamento dos olhos para o controle do ponteiro, facilitando uma implementação futura de clique pelo piscar dos olhos e \textit{Eye Tracking}.}
 
 
+%% REVDEIA 11: AQUI TAMBÉM ACHO QUE DEVERIA IR PARA O CAPÍTULO DO VISIUMOUSE 
+
 \section{VIABILIDADE}\label{Sub:viabilidade}
+
 Com a crescente evolução das áreas de IA é evidente o aumento de ferramentas e estudos que colaboram para a criação e implementação de novas aplicações. Uma subárea da IA que vem ganhando destaque é a VC que tem como foco extrair significado as imagens virtuais com base em análise e estudo de padrões.
 
 Com a evolução da VC possibilitou a criação de novas aplicações, toda atividade humana que tinha como base a visão pode ser transformada em uma aplicação de VC. Grandes inovações nas áreas de saúde e Astronomia com a ajuda desta área agora são possíveis, por exemplo. Atualmente é possível utilizar esta área para a busca de estruturas estranhas em imagens de exames de tomografia. 
@@ -179,6 +222,10 @@ Além disso foi utilizado a Metodologia Ágil SCRUM, nele os projetos são divid
 Para realizar os objetos desse trabalho, todo desenvolvimento do \textit{software} do VisiUMouse foi organizado em 3 ciclos: \textbf{Validação}, \textbf{Experimento} e \textbf{Melhoria}. A \textbf{Validação} foi ciclo inicial da criação da solução e tinha como objetivo validar a solução proposta, para validar foi criado um MVP, que tinha como principal funcionalidade o rastreamento dos olhos e o controle do \textit{mouse}; O \textbf{Experimento} teve como objetivo comprovar seu funcionamento, de uma tecnologia que permite o controle do \textit{mouse} apenas com o movimento da cabeça, além de levantar possíveis melhorias, como um autoajuste dos parâmetros de rastreamento e otimizar os algoritmos de processamento de vídeo; O último ciclo, \textbf{Melhoria},  compreendeu em implementar as melhorias levantadas no ciclo de \textbf{Experimento}, e após disponibilizar uma versão do \textit{software} do VisiUMouse no site oficial "www.visiumouse.com".
 
 \chapter{VISIUMOUSE}\label{CAP4}
+
+
+
+
 VisiUMouse é um projeto de VC com o objetivo de ajudar pessoas com algum tipo de deficiência físico motora a utilizar o computador de maneira simples e fácil apenas com do movimento da cabeça, usando os olhos como referência. Permitindo a substituição do \textit{mouse} comum por uma nova IHC adequada e configuráveis. O rastreamento dos olhos do usuário é sutil e não causa nenhum desconforto, e apresenta vantagens óbvias para usuários que não podem usar dispositivos tradicionais de entrada de computador, como teclado, \textit{mouse} e teclado. Este tipo de tecnologia tem outro diferencial que é desnecessário um \textit{hardware}, sensor, sinal conectado no usuário.
 % * <rafael.cardoso@gmail.com> 2018-04-19T10:53:04.015Z:
 % 
@@ -187,6 +234,8 @@ VisiUMouse é um projeto de VC com o objetivo de ajudar pessoas com algum tipo d
 % 
 % ^.
 
+
+%% REVDEIA N : quem sabe alterar o nome para ARQUITETURA
 \section{Funcionamento}\label{Sub:funcionamento-visiumouse}
 VisiUMouse é um projeto que tem como objetivo principal a utilização de computadores pessoais (PC) exclusivamente com o movimento da cabeça, isto é possível com base na captura de vídeo feita pelo \textit{webcam} do usuário e o processamento dos dados do vídeo recebidos, e com o uso de algoritmos de rastreamento de objetos e \textit{Machine Learning} é possível reconhecer a posição atual dos olhos do usuário. 
 % * <rafael.cardoso@gmail.com> 2018-04-19T10:55:03.140Z:
@@ -264,6 +313,11 @@ O VisiUMouse tem seu funcionamento baseado no movimento da cabeça/face, usando 
 \end{figure}
 
 Para determinar a direção do movimento do ponteiro é feita uma comparação com a posição dos olhos em relação às linhas verde e vermelha. Por exemplo, se o olho direito estiver próximo da linha verde e o olho esquerdo próximo da linha vermelha, indica que o usuário está com a cabeça inclinada para esquerda e que o cursor do \textit{mouse} deve ir para o mesmo lado, como mostrado na Figura \ref{fig:funcionamento} (1: para esquerda). Também é possível fazer movimentos para direita, para cima e para baixo (vide Figura \ref{fig:funcionamento}), além da combinação desses movimentos, tornando possível realizar movimentações em diagonal. No momento em que o movimento do cursor do \textit{mouse} se inicia, o usuário não precisa mais deslocar os olhos para manter o movimento, ele apenas precisa permanecer na mesma posição, podendo tornar o controle do \textit{mouse} menos cansativo, e assim evitando o desgaste físico do usuário \footnote{Foi disponibilizado um vídeo com o funcionamento básico do VisiUMouse, em: http://visiumouse.com/\#funcionamento}. 
+
+
+
+%% REVDEIA : AQUI QUEM SABE RENOMEAR PARA COMPARAÇÃO COM SOLUÇÕES ANÁLOGAS, PORQUE PARECE SINÔNIMO AOS TRABALHOS RELACIONADOS
+%%ALIÁS, FARIA MUITO MAIS SENTIDO SE ESTAS OBSERVAÇÕES E A TABELA COMPARATIVA ESTIVESSE EM TRABALHOS RELACIONADOS
 
 \subsection{Soluções Análogas}\label{Sub:tabela-comparativa}
 % * <rafael.cardoso@gmail.com> 2018-04-19T11:23:03.438Z:
