@@ -63,11 +63,12 @@ Estes desafios tornam-se complexos pelo fato das imagens digitais serem apenas v
 Um dos grandes desafios da área de VC é a detecção e rastreamento de alvos, principalmente por sua aplicação em sistemas de vigilância de vídeo, análise de atividade humana, monitoramento de tráfego urbano e rural, rastreamento de animais e robótica autônoma. A análise de atividade humana ganha destaque quando possibilita uma automatização ou facilitação de uma atividade, como utilizar o computador todos os dias \cite{alaya2012multipeople-UPPERCASE}.
 
 Visando solucionar os problemas citados anteriormente, a área de VC utiliza de reconhecimento de padrões, aprendizado de máquina (\textit{machine learning}), Geometria Projetiva (GP), PDI e teoria dos grafos \cite{prince2012computer}. É comumente visto em aplicações de redes sociais como o reconhecimento de amigos em uma foto do Facebook ou em zoom automático em fotos com muitos rostos, a Figura \ref{fig:exemplo-vc} ilustra um exemplo de múltiplos reconhecimentos de rostos (retângulos verdes) em um mesmo instante.
-
-\begin{figure}[htbp]
+%[htbp]
+\begin{figure}[H]
 \caption{Exemplo de aplicação de Visão Computacional para o reconhecimento de rostos.}
- \centering \includegraphics[scale=1]{img/figura-1.png} 
- {\fontsize{11}{11}\selectfont \textbf{Fonte:} Elaborada pelo autor.}
+\centering \includegraphics[scale=0.6]{img/figura-1.png}
+ 
+{\fontsize{11}{11}\selectfont \textbf{Fonte:} Elaborada pelo autor.}
 \label{fig:exemplo-vc}
 \end{figure}
 
@@ -200,9 +201,10 @@ O processo de \textit{Machine Learning} é utilizado para reconhecer padrões de
 
 Os objetos procurados pela estrutura de detecção universalmente envolvem as somas de pixeis de imagem dentro de áreas retangulares, estes valores são comparados com os valores dos estágios do arquivo \textit{haar fea-tures}, e assim determinar se a área examinada da imagem possui ou não o objeto que pretende detectar. A Figura \ref{fig:viola-jones-ret} apresenta o processo de somas de pixeis da imagem que está sendo trabalhada, as somas são feitas dentro dos retângulos. 
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \caption{Algoritmo de Viola Jones.} 
-\centering \includegraphics[scale=1]{img/viola-jones-ret.png}
+\centering \includegraphics[scale=0.6]{img/viola-jones-ret.png}
+
 {\fontsize{11}{11}\selectfont \textbf{Fonte:} Elaborada pelo autor.}
 \label{fig:viola-jones-ret}
 \end{figure}
@@ -214,22 +216,21 @@ Normalmente os processos de rastreamento são feitos em um processador responsá
 Genericamente o processamento da imagem contém 3 estágios: Captura, Análise e Compressão da Imagem. A \textbf{Captura} trata da aquisição dos dados de entrada de vídeo; a \textbf{Análise} trata do reconhecimento do objeto alvo. Para o reconhecimento é necessário um conjunto de padrões do alvo, esse processo é nomeado de Treinamento e é responsável por gerar um arquivo XML que contém características e padrões dos objetos alvos. A Classificação é o processo final que define se um determinado pedaço da imagem contém o objeto que pretende detectar. A \textbf{Compressão da Imagem} é o processo feito para reduzir a redundância dos dados, de forma a armazenar ou transmitir esses mesmos dados de forma eficiente, de acordo com \citeonline{rolim2008sistema}.
 
 Com os conceitos do algoritmo de Viola-Jones e as bibliotecas de suporte a PDI foi possível desenvolver o VisiUMouse, o qual tem como característica principal o reconhecimento e rastreio dos olhos do usuário, para  que ele controle o \textit{mouse}. O processo de movimento dos olhos e o movimento do ponteiro do \textit{mouse} é dado em dezenas de milissegundo, este valor depende da GPU do computador do usuário. A Figura \ref{fig:visiumouse-1} mostra o funcionamento do rastreando dos olhos do usuário.
-
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \caption{Tela de captura de vídeo do VisiUMouse.}
+\includegraphics[scale=.4]{img/visiumouse-1.png}
 
-\includegraphics[scale=.6]{img/visiumouse-1.png}
-
-  {\fontsize{11}{11}\selectfont \textbf{Fonte:} Elaborada pelo autor.}
+ {\fontsize{11}{11}\selectfont \textbf{Fonte:} Elaborada pelo autor.}
 \label{fig:visiumouse-1}
 \end{figure}
 
 O VisiUMouse tem seu funcionamento baseado no movimento da cabeça/face, usando os olhos como ponto de referência e a Técnica de Zona Neutra e de Movimento (TZNM). A medida do deslocamento dos olhos é feita através do processamento das posições anteriores, ou seja, se a medida for superior a configurada é feita a movimentação do ponteiro (zona de movimento da TZNM), se for menor o ponteiro permanece parado (zona neutra da TZNM). Para processar para qual lado o cursor deve ir é verificada a posição dos olhos em relação às linhas (ilusórias) vermelha e verde, como pode ser visto na Figura \ref{fig:funcionamento}.
 
-\begin{figure}[htbp]
-\caption{Layout do VisiUMouse: telas de rastreamento e processamento do deslocamento dos olhos.}
-\centering \includegraphics[scale=1]{img/funcionamento2.png}
+\begin{figure}[H]
+\caption{VisiUMouse: telas de rastreamento e processamento do deslocamento dos olhos.}
+\centering \includegraphics[scale=.8]{img/funcionamento2.png}
+
 {\fontsize{11}{11}\selectfont \textbf{Fonte:} Elaborada pelo autor.}
 \label{fig:funcionamento}
 \end{figure}
@@ -250,10 +251,15 @@ A Tabela \ref{tabela-comparativa} apresenta uma comparação entre os \textit{so
 A Tabela \ref{tabela-comparativa} apresenta 6 atributos de comparação:
 \begin{enumerate}
 \item \textbf{Clique por Tempo}: os dispositivos de TA com base em vídeo geralmente utilizam a técnica do clique do \textit{mouse} para simplificar o uso, esta técnica consiste em deixar o cursor do \textit{mouse} parado por um determinado tempo para gerar o clique na mesma posição que o curso está. Apesar de o clique por tempo ser comumente utilizado pode influenciar no desempenho do usuário em executar tarefas no computador que necessitam ser rápidas, como jogos. O VisiUMouse faz o rastreamento dos olhos permitindo implementar uma funcionalidade de clique pelo piscar dos olhos. 
+
 \item \textbf{Tipos de Cliques}: este atributo representa a variedade de tipos de clique e funcionalidade do \textit{mouse} que a tecnologia apresenta, entre eles estão o clique primário (comumente o botão esquerdo do \textit{mouse}), clique secundário (comumente o botão direito do \textit{mouse}), a funcionalidade de arrastar etc.
+
 \item \textbf{Multiplataforma}: característica de um sistema funcionar igualmente em diferentes plataformas (Sistemas Operacionais).
+
 \item \textbf{Tipo de Movimento}: atributo que define como o movimento do cursor é feito em ralação ao objeto rastreado. As TA apresentadas utilizam o movimento espelhado que pode ser determinado por um reflexo do movimento do objeto rastreado no moimento do cursor do \textit{mouse}, apesar de ser intuitivo pode causar um desgaste físico extra na região do pesco e tornar inviável para pessoas que tenham menos mobilidade com a cabeça. A TZNM apresenta uma solução alternativa para o movimento do cursor do \textit{mouse} possibilitando um desgaste físico menor e o movimento por toda a tela do computador com uma menor mobilidade da parte do usuário.
+
 \item \textbf{Objeto Rastreado(s)}: atributo que define qual objeto da cabeça do usuário é rastreado, ou seja, o objeto que o \textit{software} vai identificar a cada \textit{frame} da entrada de vídeo para definir o deslocamento desse objeto. O CameraMouse permite uma configuração de qual objeto vai ser rastreado, porém perde a referência com algum tempo de uso fazendo com que o usuário precise configurar de novo o objeto. Já o FacialMouse rastreia o rosto do usuário permitindo que o usuário não precise fazer uma configuração antes de usar. O VisiUMouse rastreia os 2 olhos do usuário possibilitando 2 pontos de referência que podem aumentar a precisão da leitura dos movimentos do usuário.
+
 \item \textbf{Quantidade Objeto Rastreado(s)}: define a quantidade de objetos que sera rastreado, quanto maior a quantidade mais pontos de referencia a aplicação vai ter para entender o movimento do usuário.
 \end{enumerate}
 
@@ -290,15 +296,15 @@ O Diagrama de Caso de Uso utiliza a linguagem simples, descrevendo o comportamen
 
 A Figura \ref{fig:use-case-diagram} mostra o Caso de Uso do VisiUMouse, a funcionalidade dele é relativamente simples, no diagrama temos dois Atores. O Ator “usuário” é o usuário que vai utilizar o computador apenas com o movimento dos olhos, ele é o foco deste projeto. O Ator “responsável” que pode ser definido como a pessoa responsável por cuidar do usuário, podendo ser algum familiar ou profissional da área da saúde como enfermeiro(a) ou médico(a), ele vai ser responsável por apenas executar a aplicação, isto é, ele só é necessário no primeiro momento. 
 
-O início do funcionamento é marcado pela inicialização da aplicação, representado como a elipse “iniciar aplicação” no diagrama. Em seguida é feito o reconhecimento dos olhos, representado pela elipse “reconhecimento olhos” no diagrama, a aplicação ainda define qual das duplas de olhos ele deve rastrear, esta funcionalidade é representada pela elipse “definir olhos principais” no diagrama.  Após isto é dado o controle do \textit{mouse} para o usuário, é feita uma simulação do \textit{mouse}, representado pela elipse “controlar mouse”, além disto é possível entrar na área de configuração a qualquer momento, representado pela elipse “configurar”.
-
-\begin{figure}[htbp]
+\begin{figure}[H]
 \caption{Diagrama de Caso de Uso.}
-\centering \includegraphics[scale=.6]{img/UseCase_Diagram_2.png}
+\centering \includegraphics[scale=.5]{img/UseCase_Diagram_2.png}
 
 {\fontsize{11}{11}\selectfont \textbf{Fonte:} Elaborada pelo autor.}
 \label{fig:use-case-diagram}
 \end{figure}
+
+O início do funcionamento é marcado pela inicialização da aplicação, representado como a elipse “Iniciar aplicação” no diagrama. Em seguida é feito o reconhecimento dos olhos, representado pela elipse “Reconhecer olhos” no diagrama, a aplicação ainda define qual das duplas de olhos ele deve rastrear, esta funcionalidade é representada pela elipse “Definir olhos principais” no diagrama.  Após isto é dado o controle do \textit{mouse} para o usuário, é feita uma simulação do \textit{mouse}, representado pela elipse “Controlar mouse”, além disto é possível entrar na área de configuração a qualquer momento, representado pela elipse “Configurar”.
 
 % \subsection{Diagrama de Classes}
 % O Diagrama de Classes é o mais utilizado e o mais importante da UML. É extremamente relevante junto com o paradigma de Orientação a Objetos. E serve de apoio para a maioria dos demais diagramas. Como o próprio nome diz, define a estrutura das classes utilizadas pelo sistema, determinando os atributos e métodos que cada classe possui, segundo \citeonline{guedes2011uml}. O Diagrama da Figura \ref{fig:diagrama-classes} apresenta o diagrama utilizado para modelagem do VisiUMouse, a classe “Detector” tem grande destaque, é ela que detecta e rastreia os olhos do usuário, ela está representada no diagrama como “Detector”. Outra classe importante é a responsável por simular o \textit{mouse}, dando o controle do computador para o usuário, está representado como “Mouse” no diagrama. E por fim a classe “Main” que é a responsável por controlar as outras classes. 
@@ -353,7 +359,8 @@ O desenvolvimento do site tem como objetivo disponibilizar todo o conteúdo refe
 
 \begin{figure}[htbp]
 \caption{Interface da página inicial do Site.} 
-\centering \includegraphics[scale=.165]{img/site.png}
+\centering \includegraphics[scale=.33]{img/site.png}
+
 {\fontsize{11}{11}\selectfont \textbf{Fonte:} Elaborada pelo autor.}
 \label{fig:site}
 \end{figure}
@@ -453,7 +460,7 @@ Neste Capítulo é manifestado a visão do usuário final, desde o cadastro e en
 \section{Download do VisiUMouse}
 Para qualquer usuário que deseja fazer o \textit{download} do VisiUMouse é obrigatório o cadastro, caso não tenha se cadastrado antes, caso já tenha se cadastrado em um outro momento é preciso apenas efetuar a entrada (\textit{login}), para isso foi criado uma sessão no menu que corresponde a essas funcionalidades, a "ENTRAR", na Figura \ref{fig:site-entrar} podemos ver essa opção no canto superior direito, marcado com vermelho. Ao clicar nessa opção o usuário vai entrar na página entrar, como mostrado em "Página de entrada", a qual ele pode inserir seus dados para entrar no site, porém caso ele não tenha se cadastrado ele pode clicar em "CADASTRAR", ainda na mesma página, após clicar em "CADASTRAR" é carregado a página de cadastro, como mostrado na Figura \ref{fig:site-entrar} na "Página de cadastro". Para fazer o cadastro é necessário o usuário informar seus dados pessoais, se alguma informação estiver incorreta o próprio site vai indicar. 
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \caption{Páginas de cadastro e entrada de usuários do site.} 
 \centering \includegraphics[scale=0.45]{img/site-entrar.png}
 
@@ -463,9 +470,9 @@ Para qualquer usuário que deseja fazer o \textit{download} do VisiUMouse é obr
 
 Após a entrada do usuário no site é possível fazer o \textit{download} do VisiUMouse, nessa página ele pode ver um tabela com características de cada versão, como mostrado na Figura \ref{fig:site-download}.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \caption{Página de downloads do site.} 
-\centering \includegraphics[scale=0.45]{img/site-download.png}
+\centering \includegraphics[scale=0.35]{img/site-download.png}
 
 {\fontsize{11}{11}\selectfont \textbf{Fonte:} Elaborada pelo autor.}
 \label{fig:site-download}
@@ -474,7 +481,7 @@ Após a entrada do usuário no site é possível fazer o \textit{download} do Vi
 \section{Instalando o VisiUMouse}
 A instalação do VisiUMouse segue o padrão de outros instaladores de \textit{softwares} disponíveis no mercado, a primeira tela é de apresentação, explicando o que o instalador vai fazer e se o usuário concorda; uma tela onde é configurado a pasta onde o VisiUMouse vai ser instalado; uma tela para iniciar a instalação; e, por fim, uma tela avisando que o VisiUMouse já foi instalado, como mostrado na Figura \ref{fig:visiumouse-instalador}.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \caption{Telas de instalação do VisiUMouse.} 
 \centering \includegraphics[scale=0.45]{img/software-instalador.png}
 
@@ -485,7 +492,7 @@ A instalação do VisiUMouse segue o padrão de outros instaladores de \textit{s
 \section{VisiUMouse}
 Após a instalação, o VisiUMouse pode ser executado através de um atalho que foi criado na área de trabalho. A primeira tela que renderizada é a tela principal da GUI, como vista na Figura \ref{fig:visiumouse-tela-principal}, é ela que tem os primeiros passos para iniciar o controle do movimento e clique do \textit{mouse}. No primeiro momento é preciso clicar no botão "iniciar", para iniciar a \textit{webcam}.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \caption{Tela principal do VisiUMouse.} 
 \centering \includegraphics[scale=.5]{img/visiumouse-tela-principal-v216.png}
 
@@ -495,15 +502,15 @@ Após a instalação, o VisiUMouse pode ser executado através de um atalho que 
 
 A inicialização da \textit{webcam} é dada pela tela de captura de vídeo, como visto na Figura \ref{fig:visiumouse-tela-captura-video}, ela permite que e o usuário tenha o retorno se ele esta posicionado no centro da tela, e se é possível rastrear seus olhos, os retângulos vermelho em volta dos olhos mostram o rastreamento dos olhos. Nessa tela o usuário pode ver o "MODO" da aplicação, como visto no canto superior esquerdo da Figura, podendo dar 3 avisos: "FUNCIONAL" mostrando que já é possível controlar o movimento do \textit{mouse}; "DESABILITADO" informa o usuário que ele não está controlando o \textit{mouse}; "CALIBRANDO (FIQUE PARADO(A))" que informa o usuário que não deve se mover por que o VisiUMouse esta calibrando.
 
-\begin{figure}[htbp]
+No segundo momento é preciso clicar em "calibrar" para calibrar o VisiUMouse, ou seja o usuário precisa ficar parado até receber o aviso que o modo está funcional, como visto na Figura \ref{fig:visiumouse-tela-captura-video}. Após a calibração o usuário é capaz de controlar o \textit{mouse} e para desabilitar o controle basta clicar em "desabilitar" na tela principal, como visto na Figura \ref{fig:visiumouse-tela-principal}.
+
+\begin{figure}[H]
 \caption{Tela de captura de vídeo.} 
-\centering \includegraphics[scale=.35]{img/visiumouse-tela-captura-video.png}
+\centering \includegraphics[scale=.45]{img/visiumouse-tela-captura-video.png}
 
 {\fontsize{11}{11}\selectfont \textbf{Fonte:} Elaborada pelo autor.}
 \label{fig:visiumouse-tela-captura-video}
 \end{figure}
-
-No segundo momento é preciso clicar em "calibrar" para calibrar o VisiUMouse, ou seja o usuário precisa ficar parado até receber o aviso que o modo está funcional, como visto na Figura \ref{fig:visiumouse-tela-captura-video}. Após a calibração o usuário é capaz de controlar o \textit{mouse} e para desabilitar o controle basta clicar em "desabilitar" na tela principal, como visto na Figura \ref{fig:visiumouse-tela-principal}.
 
 \chapter{EXPERIMENTO}\label{CAP7}
 

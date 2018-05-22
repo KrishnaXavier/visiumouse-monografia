@@ -1,32 +1,120 @@
 \chapter{DOCUMENTAÇÃO CASO DE USO}
 \label{Apx:A}
 
+%antigo
+% \begin{longtable}{|l|l|}
+% \caption{Documentação Caso de Uso.} \label{tab:long} \\
+% \hline 
+% \multicolumn{1}{|c|}{\textbf{Nome do Caso de Uso}} & 
+% \multicolumn{1}{c|}{\textbf{Funcionamento do Software}} \\ \hline 
+% \endfirsthead
+% \hline
+% Caso de Uso Geral &  \\ \hline
+% Ator Principal & Portador da Deficiência Físico ou Motor \\ \hline
+% Ator Secundário & Responsável pelo usuário. \\ \hline
+% Resumo & Descreve o funcionamento do software. \\ \hline 
+% Pré-condições &  O computador com entrada de vídeo \\ \hline 
+%  Pós-condições&  \\ \hline
+%  Ações do Ator& Ações do Sistema \\ \hline
+%  1.	Executar o Software&  \\ \hline
+%  &  2.	Inicialização\\ \hline
+%  3.	Posicionamento do Usuário&  \\ \hline
+%  & 4.	Reconhecimento da face  \\ \hline
+%  & 5.	Feedback do reconhecimento \\ \hline
+%  & 6.	Rastreio da face \\ \hline
+%  & 7.	Controle do mouse \\ \hline
+% 8.	Movimento da cabeça &  \\ \hline
+%  &  9.	Movimento do mouse\\ \hline
+% \end{longtable}
+
+%------------------------- fazendo
 
 \begin{longtable}{|l|l|}
-\caption{Documentação Caso de Uso.} \label{tab:long} \\
-
+\caption{Documentação Caso de Uso \textit{Iniciar aplicação}.} \label{tab:dcu-1} \\
 \hline 
 \multicolumn{1}{|c|}{\textbf{Nome do Caso de Uso}} & 
 \multicolumn{1}{c|}{\textbf{Funcionamento do Software}} \\ \hline 
 \endfirsthead
-
 \hline
 Caso de Uso Geral &  \\ \hline
-Ator Principal & Portador da Deficiência Físico ou Motor \\ \hline
-Ator Secundário & Responsável pelo usuário. \\ \hline
-Resumo & Descreve o funcionamento do software. \\ \hline 
-Pré-condições &  O computador com entrada de vídeo \\ \hline 
- Pós-condições&  \\ \hline
+Ator Principal & Usuário, responsável\\ \hline
+Ator Secundário &  \\ \hline
+Resumo & Usuário/responsável iniciando a aplicação. \\ \hline 
+Pré-condições &  O Software deve ter sido executado. \\ \hline 
+Pós-condições &  Mostrar a tela de captura de vídeo. \\ \hline
  Ações do Ator& Ações do Sistema \\ \hline
- 1.	Executar o Software&  \\ \hline
- &  2.	Inicialização\\ \hline
- 3.	Posicionamento do Usuário&  \\ \hline
- & 4.	Reconhecimento da face  \\ \hline
- & 5.	Feedback do reconhecimento \\ \hline
- & 6.	Rastreio da face \\ \hline
- & 7.	Controle do mouse \\ \hline
-8.	Movimento da cabeça &  \\ \hline
- &  9.	Movimento do mouse\\ \hline
+ 1.	Clicar em iniciar na tela principal.&  \\ \hline
+\end{longtable}
+
+\begin{longtable}{|l|l|}
+\caption{Documentação Caso de Uso \textit{Configurar}.} \label{tab:dcu-1} \\
+\hline 
+\multicolumn{1}{|c|}{\textbf{Nome do Caso de Uso}} & 
+\multicolumn{1}{c|}{\textbf{Funcionamento do Software}} \\ \hline 
+\endfirsthead
+\hline
+Caso de Uso Geral &  \\ \hline
+Ator Principal & Usuário\\ \hline
+Ator Secundário & \\ \hline
+Resumo & Usuário fazendo configuração. \\ \hline 
+Pré-condições &  Estar na parte de configuração. \\ \hline 
+Pós-condições &  Configuração. \\ \hline
+ Ações do Ator& Ações do Sistema \\ \hline
+ 1.	Clicar em uma das configurações.&  \\ \hline
+ 2.	Configurar um parâmetro.&  \\ \hline
+ & 3. Envia a novo parâmetro para o sistema. \\ \hline
+\end{longtable}
+
+\begin{longtable}{|l|l|}
+\caption{Documentação Caso de Uso \textit{Reconhecer olhos}.} \label{tab:dcu-1} \\
+\hline 
+\multicolumn{1}{|c|}{\textbf{Nome do Caso de Uso}} & 
+\multicolumn{1}{c|}{\textbf{Funcionamento do Software}} \\ \hline 
+\endfirsthead
+\hline
+Caso de Uso Geral &  \\ \hline
+Ator Principal & Usuário\\ \hline
+Ator Secundário & \\ \hline
+Resumo & Sistema rastreando os olhos do usuário. \\ \hline 
+Pré-condições &  Aplicação iniciada. \\ \hline 
+Pós-condições &  Leitura da posição dos olhos. \\ \hline
+ Ações do Ator& Ações do Sistema \\ \hline
+ 1.	Clicar em calibrar.&  \\ \hline
+ & 2. Rastrear a posição dos olhos do usuário. \\ \hline
+\end{longtable}
+
+\begin{longtable}{|l|l|}
+\caption{Documentação Caso de Uso \textit{Definir olhos principais}.} \label{tab:dcu-1} \\
+\hline 
+\multicolumn{1}{|c|}{\textbf{Nome do Caso de Uso}} & 
+\multicolumn{1}{c|}{\textbf{Funcionamento do Software}} \\ \hline 
+\endfirsthead
+\hline
+Caso de Uso Geral &  \\ \hline
+Ator Principal & Usuário\\ \hline
+Ator Secundário & \\ \hline
+Resumo & Define os olhos do usuário. \\ \hline 
+Pré-condições &  Aplicação calibrada. \\ \hline 
+Pós-condições &  \\ \hline
+ Ações do Ator& Ações do Sistema \\ \hline
+ & 1. Identifica os olhos. \\ \hline
+\end{longtable}
+
+\begin{longtable}{|l|l|}
+\caption{Documentação Caso de Uso \textit{Controlar mouse}.} \label{tab:dcu-1} \\
+\hline 
+\multicolumn{1}{|c|}{\textbf{Nome do Caso de Uso}} & 
+\multicolumn{1}{c|}{\textbf{Funcionamento do Software}} \\ \hline 
+\endfirsthead
+\hline
+Caso de Uso Geral &  \\ \hline
+Ator Principal & Usuário\\ \hline
+Ator Secundário & \\ \hline
+Resumo & Controle do mouse. \\ \hline 
+Pré-condições &  Olhos identificados. \\ \hline 
+Pós-condições &  \\ \hline
+Ações do Ator& Ações do Sistema \\ \hline
+ 1. Controle do mouse. &  \\ \hline
 \end{longtable}
 
 
