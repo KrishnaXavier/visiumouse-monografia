@@ -7,34 +7,44 @@ O conceito de TA, apesar de recente, pode ser definido como o conjunto de sistem
 
 O grande desafio de criar as condições necessárias à acessibilidade das Tecnologias da Informação e Comunicação (TICs) por pessoas com deficiência, transformando a interação desses usuários o mais simples possível, é presente dentro da área de Interação Humano-Computador (IHC). É evidente que as características humanas e os estilos de interação são fatores determinantes no modo como é feita a interação com as TICs através das tecnologias.
 
-Tendo em vista os fatores já citados, as motivações pessoais e as áreas de interesse como TA, Visão Computacional (VC) e Processamento Digital de Imagens (PDI), motivou o desenvolvimento do VisiUMouse, que é  uma tecnologia que permite o uso de um computador por pessoas com algum tipo de deficiência física por meio do rastreamento dos movimentos dos olhos através da entrada de vídeo da \textit{webcam}, utilizando os conceitos e premissas da VC. Possibilitando o uso desta tecnologia para qualquer pessoa no mundo por meio de \textit{download} do \textit{Software} disponível em um repositório público e gratuito \footnote{http://www.visiumouse.com}.
+O desenvolvimento de soluções baseadas em conceitos de TA, usualmente requerem a adoção de técnicas para desenvolvimento tecnológico, provenientes de outras áreas da Ciência da Computação. A Visão Computacional (VC) é a área da ciência que desenvolve teorias e métodos voltados à extração automática de informações úteis contidas em imagens. O objetivo principal é criar e transmitir essas informações às máquinas de forma compreensível \cite{prince2012computer}.
 
-Visão Computacional é a área da ciência que desenvolve teorias e métodos voltados à extração automática de informações úteis contidas em imagens \cite{prince2012computer}. O objetivo dessa ciência é criar e transmitir essas informações às máquinas de forma compreensível, segundo \citeonline{prince2012computer}.
+
+As motivações sociais previamente citadas em conjunção com as áreas de pesquisa de interesse como TA, VC e Processamento Digital de Imagens (PDI), motivou o desenvolvimento do VisiUMouse, uma tecnologia que permite o uso de um computador por pessoas com algum tipo de deficiência física por meio do rastreamento dos movimentos dos olhos através da entrada de vídeo da \textit{webcam}, utilizando os conceitos e premissas da VC. A ideia é disseminar o uso desta tecnologia por qualquer pessoa no mundo por meio da disponibilização desta solução em um repositório público e gratuito \footnote{http://www.visiumouse.com}.
+
+%Visão Computacional é a área da ciência que desenvolve teorias e métodos voltados à extração automática de informações úteis contidas em imagens \cite{prince2012computer}. O objetivo dessa ciência é criar e transmitir essas informações às máquinas de forma compreensível, segundo \citeonline{prince2012computer}.
 
 
 %% REVDEIA 4: PEÇA PARA ALGUÉM LER TEU TRABALHO EM VOZ ALTA, FACILITA PARA ENCONTRAR OS ERROS , COMO POR EXEMPLO: Restando do trabalho.... esta irei alterar, mas não conseguirei fazer em todo
-O restante do trabalho esta organizado da seguinte forma: o Capítulo \ref{CAP2} apresenta a fundamentação teórica, o Capítulo \ref{CAP3} descreve a Metodologia utilizada, o Capítulo \ref{CAP4} apresenta o desenvolvimento da aplicação desenvolvida, o Capítulo \ref{CAP5} apresenta a modelagem do VisiUMouse, o Capítulo \ref{CAP6} expõe os conceitos de Design utilizados,  o Capítulo \ref{CAP6-tecnilogias-utilizadas} apresenta as tecnologias utilizadas no desenvolvimento, o Capítulo \ref{CAP-tecnologia-visiumouse} demonstra como utilizar o VisiUMouse, o Capítulo \ref{CAP7} refere-se aos experimentos de avaliação realizados com o \textit{software} VisiUMouse e faz uma análise de seus resultados e o Capítulo \ref{CAP-consideracoes-finais-trabalhos-futuros} retrata as considerações finais.
+O restante do trabalho esta organizado da seguinte forma: o Capítulo \ref{CAP2} apresenta a fundamentação teórica necessária para melhor compreensão do trabalho. O Capítulo \ref{CAP3} descreve a Metodologia utilizada ao longo do projeto. O Capítulo \ref{CAP4} apresenta o desenvolvimento da aplicação concebida. O Capítulo \ref{CAP5} apresenta a modelagem do VisiUMouse. O Capítulo \ref{CAP6} expõe os conceitos de Design utilizados,  o Capítulo \ref{CAP6-tecnilogias-utilizadas} apresenta as tecnologias utilizadas no desenvolvimento, o Capítulo \ref{CAP-tecnologia-visiumouse} demonstra como utilizar o VisiUMouse, o Capítulo \ref{CAP7} refere-se aos experimentos de avaliação realizados com o \textit{software} VisiUMouse e faz uma análise de seus resultados e o Capítulo \ref{CAP-consideracoes-finais-trabalhos-futuros} retrata as considerações finais.
 %------------------------------------------------------------------
 
 
 \chapter{FUNDAMENTAÇÃO TEÓRICA E MOTIVAÇÕES}\label{CAP2}
 A evolução contínua e exponencial das tecnologias possibilitam cada vez mais a criação e melhorias de em vários âmbitos sociais, digitais, acadêmicos e profissionais. Para isso cada pessoa tem acesso a um arsenal de conhecimento imensurável, na \textit{internet}, como a grande quantidade de artigos e pesquisas acadêmicas publicados diariamente e o desenvolvimento e distribuição continuo de \textit{softwares} de código aberto. É evidente o crescimento das possibilidades em todas as áreas de conhecimento com a revolução da informação, representado um novo modelo mundial para todas as pessoas.
 
-
+\textbf{[RCC - acredito que aqui ficou meio enrolation :-)
+Coloca uma breve descrição do que o leitor vai ler neste capítulo, e porque isso está sendo apresentado aqui. Tipo, esse capítulo é para apresentar  conceitos que tu usou, que a banca pode não estar familiarizada. Correto? Se é isso, Deixa claro isso.
+]
+}
 \section{TECNOLOGIA ASSISTIVA}\label{Sub:ta-brasil}
-Tecnologia Assistiva pode ser considerada como todos os recursos e serviços que contribuem para proporcionar ou ampliar as habilidades funcionais de pessoas com deficiência e consequentemente promover vida independente e inclusão. O termo TA, que é uma expressão nova, e se refere a um conceito ainda em pleno processo de construção e sistematização. A utilização de recursos de TA, entretanto, remonta aos primórdios da história da humanidade ou até mesmo da pré-história. Qualquer pedaço de pau utilizado como uma bengala improvisada, por exemplo, caracteriza o uso de um recurso de TA. \cite{galvao2009tecnologia-UPPERCASE}.
+Tecnologia Assistiva pode ser considerada como todos os recursos e serviços que contribuem para proporcionar ou ampliar as habilidades funcionais de pessoas com deficiência e consequentemente promover vida independente e inclusão \textbf{[RCC - Essa definição tu tirou de algum canto? Ou tu que definiu assim? Se tem a referência, coloca aqui. É um capítulo de fundamentação teórica, então é suposto ele ter bastante referências bibliográficas]} . O termo TA é uma expressão nova, e se refere a um conceito ainda em pleno processo de construção e sistematização. A utilização de recursos de TA, entretanto, remonta aos primórdios da história da humanidade ou até mesmo da pré-história. Qualquer pedaço de pau utilizado como uma bengala improvisada, por exemplo, caracteriza o uso de um recurso de TA. \cite{galvao2009tecnologia-UPPERCASE}.
 
-As pessoas com deficiência motora (membros superiores) encontram, ainda, grande dificuldades em utilizar um computador pessoal, pelo fato de que os dispositivos padrão de interação são controlados basicamente apenas pelo movimento das mãos. Este motivo incapacita a utilização de dispositivos de entrada tradicionais, como o \textit{mouse} e teclado. Para essas pessoas uma tarefa simples de navegar na \textit{internet} para estudar se torna um desafio intangível, atenuado apenas pelos poucos, e caros, dispositivos de TA disponíveis no mercado. São poucas as tecnologias que dão suporte a casos onde o usuário tem apenas o controle do movimento da cabeça. Em muitos dos casos de deficiência motora, como por exemplo a ELA (Esclerose Lateral Amiotrófica), deficiência causada por acidente ou paralisia cerebral, essas pessoas possuem as faculdades mentais intactas.
+Especificamente as pessoas com deficiência motora nos membros superiores encontram grande dificuldades em utilizar um computador pessoal, pelo fato de que os dispositivos padrão de interação são controlados basicamente apenas pelo movimento das mãos. Este tipo de deficiência dificulta ou impossibilita a utilização de dispositivos de entrada tradicionais, como o \textit{mouse} e teclado. Para essas pessoas uma tarefa simples de navegar na \textit{internet} se torna um desafio intangível, atenuado apenas pelos poucos, e caros, dispositivos de TA disponíveis no mercado. São menos numerosas ainda, tecnologias que dão suporte a casos onde o usuário tem apenas o controle do movimento da cabeça. 
+%Em muitos dos casos de deficiência motora, como por exemplo a ELA (Esclerose Lateral Amiotrófica), deficiência causada por acidente ou paralisia cerebral, essas pessoas possuem as faculdades mentais intactas.
 
 
 %% REVDEIA 6: DEI UMA REESCRITA NESTE PARÁGRAFO ABAIXO
-Estes fatos permitem que essas pessoas interajam com o seu ambiente de outras maneiras não convencionais, com os movimentos ainda restantes, e como os movimentos da cabeça são, os que nestes casos, permanecem funcionais, são movimentos que podem ser explorados para uma possível maneira de interação com o computador, isto é, o precisa haver um dispositivo de TA, de entrada, que capte os movimentos da cabeça (como rotação e flexão) e seus elementos, como boca, nariz e olhos, além da fala. 
+Estes fatores permitem que essas pessoas interajam com o seu ambiente de outras maneiras não convencionais, com os movimentos ainda restantes, e como os movimentos da cabeça são, os que nestes casos, permanecem funcionais, são movimentos que podem ser explorados para uma possível maneira de interação com o computador. Em casos específicos como este, é necessário haver um dispositivo de TA, focado na entrada de dados, que capte os movimentos da cabeça (como rotação e flexão) e seus elementos, como boca, nariz e olhos, além da fala. 
 
-Considerando estes fatos podemos citar três tipos de entrada, alternativos:
+Considerando estes fatos podemos citar três tipos de entradas, alternativos:
+
 \begin{enumerate}
 \item A entrada de vídeo, onde o usuário estará disposto na frente de uma câmera como a \textit{webcam}.
+
 \item A entrada de áudio, onde o usuário vai precisar ter um microfone.
-\item E por fim a entrada de contato físico, onde o usuário vai precisar apertar botões ou switchs.
+
+\item E por fim a entrada por meio de contato físico, onde o usuário vai precisar apertar botões ou \textit{switchs}.
 \end{enumerate}
 
 % * <tsixav@gmail.com> 2018-04-17T01:00:16.483Z:
@@ -46,7 +56,7 @@ Considerando estes fatos podemos citar três tipos de entrada, alternativos:
 
 \section{VISÃO COMPUTACIONAL}\label{Sub:vc}
 
-Visão Computacional é uma subárea da Inteligência Artificial (IA) que tem como objetivo dar significado as imagens digitais com base em análise. Esta análise procura extrair algum conhecimento da representação matricial das imagens, segundo \citeonline{prince2012computer}. 
+Visão Computacional (VC) é uma subárea da Inteligência Artificial (IA) que tem como objetivo dar significado as imagens digitais com base em análise. Segundo \citeonline{prince2012computer}, esta análise procura extrair algum conhecimento da representação matricial das imagens. 
 
 São alguns exemplos referentes a área de VC: 
 \begin{itemize}
@@ -57,39 +67,40 @@ São alguns exemplos referentes a área de VC:
 \item Rastreamento de alvos.
 \end{itemize}
 
-Estes desafios tornam-se complexos pelo fato das imagens digitais serem apenas visíveis para o computador, frequentemente são estrutura de dados no formato de matrizes de distribuição de pontos e também pelo fato de não armazenarem informações sobre a cena representada pela imagem, isto é meta dados, de acordo com \citeonline{prince2012computer}.
+Estes desafios tornam-se complexos pelo fato das imagens digitais serem apenas visíveis para o computador, frequentemente são estruturas de dados no formato de matrizes de distribuição de pontos e também pelo fato de não armazenarem informações sobre a cena representada pela imagem, isto é metadados \cite{prince2012computer}.
 
 Um dos grandes desafios da área de VC é a detecção e rastreamento de alvos, principalmente por sua aplicação em sistemas de vigilância de vídeo, análise de atividade humana, monitoramento de tráfego urbano e rural, rastreamento de animais e robótica autônoma. A análise de atividade humana ganha destaque quando possibilita uma automatização ou facilitação de uma atividade, como utilizar o computador todos os dias \cite{alaya2012multipeople-UPPERCASE}.
 
-Visando solucionar os problemas citados anteriormente, a área de VC utiliza de reconhecimento de padrões, aprendizado de máquina (\textit{machine learning}), Geometria Projetiva (GP), PDI e teoria dos grafos \cite{prince2012computer}. É comumente visto em aplicações de redes sociais como o reconhecimento de amigos em uma foto do Facebook ou em zoom automático em fotos com muitos rostos, a Figura \ref{fig:exemplo-vc} ilustra um exemplo de múltiplos reconhecimentos de rostos (retângulos verdes) em um mesmo instante.
+Visando solucionar os problemas citados anteriormente, a área de VC utiliza de reconhecimento de padrões, aprendizado de máquina (\textit{Machine Learning}), Geometria Projetiva (GP), PDI e teoria dos grafos \cite{prince2012computer}. Isto pode ser comumente visto em aplicações de redes sociais como o reconhecimento de amigos em uma foto do Facebook ou em zoom automático em fotos com muitos rostos. A Figura \ref{fig:exemplo-vc} ilustra um exemplo de múltiplos reconhecimentos de rostos (retângulos verdes) em um mesmo instante.
+
 %[htbp]
 \begin{figure}[H]
-\caption{Exemplo de aplicação de Visão Computacional para o reconhecimento de rostos.}
+\caption{Exemplo de aplicação de VC para o reconhecimento de rostos.}
 \centering \includegraphics[scale=0.6]{img/figura-1.png}
  
 {\fontsize{11}{11}\selectfont \textbf{Fonte:} Elaborada pelo autor.}
 \label{fig:exemplo-vc}
 \end{figure}
 
-Considerando três tipos de entrada de dados comuns, como vídeo, áudio e toque é possível analisar que a entrada de vídeo possibilita uma interseção mais natural, considerando que o movimento da cabeça deve ser similar ao movimento da mão quando um usuário sem deficiência utiliza o \textit{mouse}.
+Considerando três tipos de entrada de dados comuns, como vídeo, áudio e toque é possível analisar que a entrada de vídeo possibilita uma interseção mais natural, considerando que o movimento da cabeça deve ser similar ao movimento da mão quando um usuário sem deficiência utiliza o \textit{mouse}. \textbf{[RCC - Fiquei com dúvida aqui... Estás falando da VC como conceito nesta seção, mas já tenta relacionar com o problema que irás endereçar no projeto. Não sei se este seria o melhor local para fazer esta colocação. Me pareceu fora de contexto, neste ponto. Que acha?]}
 
-Um vídeo pode ser considerado um conjunto de imagens digitais, que é uma representação numérica de uma imagem bidimensional, em forma binária, tornando possível o armazenamento, transferência, processamento ou reprodução por meios eletrônicos. Existe dois tipos de imagens, as imagens de rastreio (ou \textit{raster}) e as imagens do tipo vetorial. \cite{parker2010algorithms-UPPERCASE}.
+Um vídeo pode ser considerado um conjunto de imagens digitais, que é uma representação numérica de uma imagem bidimensional, em forma binária, tornando possível o armazenamento, transferência, processamento ou reprodução por meios eletrônicos. Existe dois tipos de imagens, as imagens de rastreio (ou \textit{raster}) e as imagens do tipo vetorial. \cite{parker2010algorithms-UPPERCASE}. As imagens de rastreio são representadas de forma matricial pelo computador, onde há uma correspondência 'bit-a-bit' da matriz que representa a imagem como o que está sendo reproduzido de fato na tela. A resolução de uma imagem define a sua matriz, então uma imagem de 1024x720 tem 737280 posições em uma matriz. 
 
-As imagens de rastreio são representadas de forma matricial pelo computador, onde há uma correspondência 'bit-a-bit' da matriz que representa a imagem como o que está sendo reproduzido de fato na tela. A resolução de uma imagem define a sua matriz, então uma imagem de 1024x720 tem 737280 posições em uma matriz. 
-
-As matrizes deste tipo não possuem nem um tipo de dados adicionais como o que existem na imagem ou que tipo de objetos ele representa. A representação e extração destes dados é tarefa da área de VC, que tem como objeto dar significado semântico para imagens digitais através do processamento delas, de acordo com \citeonline{prince2012computer}. Uma das técnicas para detectar objetos em uma imagem digital é o algoritmo de Viola-Jones.
+As matrizes deste tipo não possuem nem um tipo de dados adicionais como o que existem na imagem ou que tipo de objetos ele representa. A representação e extração destes dados é tarefa da área de VC, que tem como objeto dar significado semântico para imagens digitais através do processamento delas \cite{prince2012computer}. Uma das técnicas para detectar objetos em uma imagem digital é o algoritmo de Viola-Jones.
 
 \subsection{Conceito de Viola-Jones}
 
-O algoritmo de Viola-Jones para a identificação de objetos é um algoritmo proposto para o reconhecimento de objetos em imagens digitais, e tem como característica o alto desempenho de processamento e o alto índice de assertividade, podendo chegar até a 99,7\% dependendo do número de etapas treinadas, acurácia do classificador do objeto para qual foi treinado, segundo \citeonline{viola2001rapid}. O qual trabalha com algoritmos em cascata que se utiliza de padrões e características chamados de \textit{haar features}. Estas características são organizadas em uma estrutura de árvore em XML (\textit{Extensible Markup Language}).
+O algoritmo de Viola-Jones para a identificação de objetos é um algoritmo proposto para o reconhecimento de objetos em imagens digitais, e tem como característica o alto desempenho de processamento e o alto índice de assertividade, podendo chegar até a 99,7\% dependendo do número de etapas treinadas, acurácia do classificador do objeto para qual foi treinado \cite{viola2001rapid}. O qual \textbf{[RCC - a quem se refere esse "O qual" nesta frase. Achei que ficou confuso. É legal deixar mais claro.]} trabalha com algoritmos em cascata que se utiliza de padrões e características chamados de \textit{haar features}. Estas características são organizadas em uma estrutura de árvore em XML (\textit{eXtensible Markup Language}).
 
 \subsection{Machine Learning}
+
+\textbf{[RCC - essa seção de Machine Learning. Ela está no nível de seção correto (irmã de violaJones)? Porque parece que ficou faltando uma ligação no texto. O ViolaJones ficou bem linkado, essa seção achei meio perdida aqui. Dá uma pensada se ela está no local correto, ou se é necessária]}
 
 \textit{Machine Learning} é utilizada para reconhecer padrões em um grupo de dados, como exemplo podemos citar os padrões que boa parte dos rostos humanos apresentam. Segundo \citeonline{samuel1959some}, podemos definir \textit{Machine Learning} como o campo de estudo que dá aos computadores a habilidade de aprender sem serem explicitamente programados. O aprendizado explora o estudo e construção de algoritmos que podem aprender de seus erros e fazer previsões sobre dados, esses algoritmos operam construindo um modelo a partir de entrada de dados amostrais com o objetivo de fazer previsões ou decisões guiadas pelos dados.
 
 \chapter{METODOLOGIA}\label{CAP3}
 
-Podemos dizer que metodologia é a explicação detalhada e exata de toda ação desenvolvida no (caminho) do trabalho. É a explicação do tipo de pesquisa, dos instrumentos utilizados, do tempo previsto, da equipe de pesquisadores e da divisão do trabalho, das formas de tabulação e tratamento dos dados, enfim, de tudo aquilo que se utilizou no trabalho de pesquisa, de acordo com \citeonline{miner2012mapreduce}.
+Podemos dizer que metodologia é a explicação detalhada e exata de toda ação desenvolvida no (caminho) do trabalho. De acordo com \citeonline{miner2012mapreduce}, é a explicação do tipo de pesquisa, dos instrumentos utilizados, do tempo previsto, da equipe de pesquisadores e da divisão do trabalho, das formas de tabulação e tratamento dos dados, enfim, de tudo aquilo que se utilizou no trabalho de pesquisa.
 
 O objetivo geral do trabalho é desenvolver uma TA com base em VC que permita uma pessoa com deficiência físico motora (principalmente os membros superiores) consiga controlar o seu computador apenas com o movimento da cabeça (usando os olhos como pontos de referência), através da manipulação do movimento e cliques do \textit{mouse}.
 
@@ -180,37 +191,39 @@ Para realizar os objetos desse trabalho, todo desenvolvimento do \textit{softwar
 
 
 \chapter{VISIUMOUSE}\label{CAP4}
-VisiUMouse é um projeto de VC com o objetivo de ajudar pessoas com algum tipo de deficiência físico motora a utilizar o computador de maneira simples e fácil apenas com do movimento da cabeça, usando os olhos como referência. Permitindo a substituição do \textit{mouse} comum por uma nova IHC adequada e configuráveis. O rastreamento dos olhos do usuário é sutil e não causa nenhum desconforto, para usuários que não podem usar dispositivos tradicionais de entrada de computador, como teclado, \textit{mouse} e teclado. Este tipo de tecnologia tem outro diferencial que é desnecessário um \textit{hardware}, sensor, sinal conectado no usuário.
+VisiUMouse é um projeto de VC com o objetivo de ajudar pessoas com algum tipo de deficiência físico motora a utilizar o computador de maneira simples e fácil apenas com do movimento da cabeça, usando os olhos como referência. A ideia é permitir a substituição do \textit{mouse} convencional por uma nova IHC adequada e configurável. A técnica de  rastreamento dos olhos do usuário é sutil e não causa nenhum desconforto, para usuários que não podem usar dispositivos tradicionais de entrada de computador, como teclado, \textit{mouse} e teclado. Este tipo de tecnologia tem outro diferencial que é desnecessário um \textit{hardware}, sensor, sinal conectado no usuário.
 
 \section{Arquitetura}\label{Sub:funcionamento-visiumouse}
-VisiUMouse é um projeto que tem como objetivo principal a utilização de computadores pessoais (PC) exclusivamente com o movimento da cabeça, isto é possível com base na captura de vídeo feita pelo \textit{webcam} do usuário e o processamento dos dados do vídeo recebidos, e com o uso de algoritmos de rastreamento de objetos e \textit{Machine Learning} é possível reconhecer a posição atual dos olhos do usuário. 
-
-A Figura \ref{fig:projeto-diagrama-alto-nivel} apresenta um diagrama de alto nível do funcionamento do VisiUMouse, do lado direito podemos ver o "Usuário" disposto na frente da "Webcam"; a \textit{webcam} é responsável por capturar vídeo do "Usuário"; para cada captura (ou \textit{frame}) do vídeo é enviado um conjunto de dados para o VisiUMouse, esse processo está demonstrado em "entrada de dados";  após a leitura dos dados é iniciado o processo de rastreamento dos olhos, representado por "rastrear olhos"; em seguida ao rastreamento é feita uma análise que interpreta o movimento/deslocamento dos olhos do usuário, como podemos ver em "interpretar movimento"; e por fim o movimento dos olhos do usuário é retratado no controle do movimento do \textit{mouse}, representado por "controle mouse".
+VisiUMouse é um projeto que tem como objetivo principal a utilização de computadores pessoais (PC) exclusivamente com o movimento da cabeça, isto é possível com base na captura de vídeo feita pelo \textit{webcam} do usuário e o processamento dos dados do vídeo recebidos, e com o uso de algoritmos de rastreamento de objetos e \textit{Machine Learning} é possível reconhecer a posição atual dos olhos do usuário. A Figura \ref{fig:projeto-diagrama-alto-nivel} apresenta um diagrama de alto nível do funcionamento do VisiUMouse. 
 
 \begin{figure}[htbp]
 \centering
 \caption{Diagrama de alto nível do VisiUMouse.}
-\includegraphics[scale=.25]{img/projeto-diagrama-alto-nivel.png}
+\includegraphics[scale=.23]{img/projeto-diagrama-alto-nivel.png}
 
 {\fontsize{11}{11}\selectfont \textbf{Fonte:} Elaborada pelo autor.}
 \label{fig:projeto-diagrama-alto-nivel}
 \end{figure}
 
-O processo de \textit{Machine Learning} é utilizado para reconhecer padrões de formas de objetos, neste caso foi para rastrear olhos humanos, para isso foi necessário utilizar um banco de dados com grande volume de imagens de olhos que gerou um arquivo XML com estes padrões. Com o arquivo XML com os padrões foram utilizados os conceitos do algoritmo de Viola-Jones para fazer o processo de rastreamento \cite{viola2001rapid}. Este arquivo XML contém os padrões e características são chamados de \textit{haar features}, que são uma lista de características invariantes de um objeto.
 
-Os objetos procurados pela estrutura de detecção universalmente envolvem as somas de pixeis de imagem dentro de áreas retangulares, estes valores são comparados com os valores dos estágios do arquivo \textit{haar fea-tures}, e assim determinar se a área examinada da imagem possui ou não o objeto que pretende detectar. A Figura \ref{fig:viola-jones-ret} apresenta o processo de somas de pixeis da imagem que está sendo trabalhada, as somas são feitas dentro dos retângulos. 
+Do lado direito é possível ver o Usuário posicionado a frente da \textit{Webcam}, a qual é responsável por capturar vídeo deste Usuário. Para cada captura (ou \textit{frame}) do vídeo é enviado um conjunto de dados para o VisiUMouse, como entrada de dados que será processado pela aplicação. Após a leitura dos dados é iniciado o processo de rastreamento dos olhos, representado por "rastrear olhos". Em seguida ao rastreamento é feita uma análise que interpreta o movimento/deslocamento dos olhos do usuário, como podemos ver em "interpretar movimento". Por fim, o movimento dos olhos do usuário é retratado no controle do movimento do \textit{mouse}, representado por "controle mouse".
+
+
+O processo de \textit{Machine Learning} é utilizado para reconhecer padrões de formas de objetos. Neste caso foi para rastrear olhos humanos, sendo  necessário utilizar um banco de dados com grande volume de imagens de olhos que gerou um arquivo XML com estes padrões. Com o arquivo XML com os padrões foram utilizados os conceitos do algoritmo de Viola-Jones para fazer o processo de rastreamento \cite{viola2001rapid}. Este arquivo XML contém os padrões e características, denominados \textit{haar features}, que consistem em uma lista de características invariantes de um determinado objeto.
+
+Os objetos procurados pela estrutura de detecção universalmente envolvem as somas de pixeis de imagem dentro de áreas retangulares. Estes valores são comparados com os valores dos estágios do arquivo \textit{haar fea-tures}, e assim determinar se a área examinada da imagem possui ou não o objeto que pretende detectar. A Figura \ref{fig:viola-jones-ret} apresenta o processo de somas de pixeis da imagem que está sendo trabalhada, as somas são feitas dentro dos retângulos. 
 
 \begin{figure}[H]
-\caption{Algoritmo de Viola Jones.} 
+\caption{Algoritmo de Viola Jones. \textbf{[RCC - Melhorar essa legenda]}} 
 \centering \includegraphics[scale=0.6]{img/viola-jones-ret.png}
 
 {\fontsize{11}{11}\selectfont \textbf{Fonte:} Elaborada pelo autor.}
 \label{fig:viola-jones-ret}
 \end{figure}
 
-Aplicação de rastreamento dos olhos foi desenvolvida usando a linguagem de programação Java, esta linguagem oferece um arsenal de bibliotecas para PDI e o suporte a desenvolvimento de sistemas multiplataforma, isto é, funciona em diferentes Sistemas Operacionais. 
+Aplicação de rastreamento dos olhos foi desenvolvida usando a linguagem de programação Java, já que esta linguagem oferece um arsenal de bibliotecas para PDI e o suporte a desenvolvimento de sistemas multiplataforma, isto é, funciona em diferentes Sistemas Operacionais. 
 
-Normalmente os processos de rastreamento são feitos em um processador responsável pela renderização de gráficos em tempo real. Este tipo de processador é chamado de \textit{Graphics Processing Unit}, também conhecido como GPU.
+Normalmente os processos de rastreamento são feitos em um processador responsável pela renderização de gráficos em tempo real. Este tipo de processador é chamado de \textit{Graphics Processing Unit}, ou GPU.
 
 Genericamente o processamento da imagem contém 3 estágios: Captura, Análise e Compressão da Imagem. A \textbf{Captura} trata da aquisição dos dados de entrada de vídeo; a \textbf{Análise} trata do reconhecimento do objeto alvo. Para o reconhecimento é necessário um conjunto de padrões do alvo, esse processo é nomeado de Treinamento e é responsável por gerar um arquivo XML que contém características e padrões dos objetos alvos. A Classificação é o processo final que define se um determinado pedaço da imagem contém o objeto que pretende detectar. A \textbf{Compressão da Imagem} é o processo feito para reduzir a redundância dos dados, de forma a armazenar ou transmitir esses mesmos dados de forma eficiente, de acordo com \citeonline{rolim2008sistema}.
 
@@ -242,12 +255,13 @@ Para determinar a direção do movimento do ponteiro é feita uma comparação c
 %%ALIÁS, FARIA MUITO MAIS SENTIDO SE ESTAS OBSERVAÇÕES E A TABELA COMPARATIVA ESTIVESSE EM TRABALHOS RELACIONADOS
 \subsection{Comparação com Soluções Análogas}\label{Sub:tabela-comparativa}
 
-A área de TA apresenta um número significativo de tecnologias que permitem o melhor uso de um computador e comunicação, algumas dessas tecnologias tem como objetivo ajudar na formulação de frases através de um teclado com imagens, que representam palavras comuns, como: comer, água, banheiro, música etc. Outra parte dessas tecnologias tem como objetivo viabilizar o uso do Computador sem ajuda de outras pessoas, geralmente essas tecnologias apresentam controles de acionamento mecânico como grandes pedais ou palancas. Entra elas ainda podemo citas as que utilizam poder computacional, como as que permite o uso do computador apenas com o movimento da cabeça, geralmente a leitura do movimento é feito por um  entrada de vídeo que filma e interpreta seus movimentos.
+A área de TA apresenta um número significativo de tecnologias que permitem o melhor uso de um computador e comunicação, algumas dessas tecnologias tem como objetivo ajudar na formulação de frases através de um teclado com imagens, que representam palavras comuns, como: comer, água, banheiro, música etc. Outra parte dessas tecnologias tem como objetivo viabilizar o uso do Computador sem ajuda de outras pessoas, geralmente essas tecnologias apresentam controles de acionamento mecânico como grandes pedais ou palancas. Entra elas ainda podemo citas as que utilizam poder computacional, como as que permite o uso do computador apenas com o movimento da cabeça, geralmente a leitura do movimento é feito por um  entrada de vídeo que filma e interpreta seus movimentos. \textbf{[RCC - esse parágrafo parece mais uma descrição de TA. Isso, ao meu ver, deveria estar em algum ponto na fundamentação teórica sobra TA. Não sei se faz sentido repetir essas coisas aqui. Pelo título da seção (Comparação com soluções análogas), aqui estás com foco em comparar os trabalhos.]}
 
-A Tabela \ref{tabela-comparativa} apresenta uma comparação entre os \textit{softwares}: VisiUMouse, CameraMouse e FacialMouse; os quais apresentam algumas semelhanças como: \textit{webcam} como entrada de vídeo, uso da biblioteca OpenCV e do algoritmo de Viola-Jones. O CameraMouse é usado em diversas pesquisas, tendo mais de mil resultados no Google Acadêmico. O FacialMouse apresenta um refinamento em suas funcionalidades comparado ao CameraMouse. O CameraMouse e FacialMouse são um dos poucos que estão disponível para \textit{download}, é difícil o acesso as TA, grande parte são presente apenas em artigos acadêmicos, são poucas as que estão disponíveis para o publico, além disso elas ainda não difícil de encontrar, algumas por terem nomes genéricos outras por terem sites não ranqueado em motores de busca como Google.
-
-
+A Tabela \ref{tabela-comparativa} apresenta uma comparação entre os \textit{softwares}: VisiUMouse, CameraMouse e FacialMouse; os quais apresentam algumas semelhanças como: \textit{webcam} como entrada de vídeo, uso da biblioteca OpenCV e do algoritmo de Viola-Jones. %[RCC - comentei esse parágrafo, pois não me parece apresentar informações relevantes] O CameraMouse é usado em diversas pesquisas, tendo mais de mil resultados no Google Acadêmico. O FacialMouse apresenta um refinamento em suas funcionalidades comparado ao CameraMouse. O CameraMouse e FacialMouse são um dos poucos que estão disponível para \textit{download}, é difícil o acesso as TA, grande parte são presente apenas em artigos acadêmicos, são poucas as que estão disponíveis para o publico, além disso elas ainda não difícil de encontrar, algumas por terem nomes genéricos outras por terem sites não ranqueado em motores de busca como Google.
 A Tabela \ref{tabela-comparativa} apresenta 6 atributos de comparação:
+
+
+
 \begin{enumerate}
 \item \textbf{Clique por Tempo}: os dispositivos de TA com base em vídeo geralmente utilizam a técnica do clique do \textit{mouse} para simplificar o uso, esta técnica consiste em deixar o cursor do \textit{mouse} parado por um determinado tempo para gerar o clique na mesma posição que o curso está. Apesar de o clique por tempo ser comumente utilizado pode influenciar no desempenho do usuário em executar tarefas no computador que necessitam ser rápidas, como jogos. O VisiUMouse faz o rastreamento dos olhos permitindo implementar uma funcionalidade de clique pelo piscar dos olhos. 
 
@@ -285,15 +299,24 @@ Quantidade de Objetos Rastreados:                   & 2                         
 
 
 \chapter{MODELAGEM}\label{CAP5}
-A modelagem de \textit{software} é de extrema importância por que determina as necessidades de um sistema de informação. E determina os questionamentos que vão mapear a estrutura do sistema, como “Qual a real necessidade de se projetar este sistema? ”, existe uma diferença importante entre a modelagem e a prática da construção do sistema, isto é o desenvolvimento. Os 2 devem trabalhar juntos para o bem te todas as partes de um \textit{software}, tanto cliente quanto empresa ou desenvolvedor. E para fazer a modelagem se utiliza de diagramas que é o próximo tópico deste documento.
 
-\section{DIAGRAMAS}\label{Sub:diagramas}
-Foram utilizados os conceitos de Linguagem de Modelagem Unificada (UML) apresentados em aula na disciplina de Análise e Projeto Orientados a Objetos para a modelagem de diagramas. Através deles foi possível ter uma visão mais refinada do funcionamento do VisiUMouse e possíveis pontos instáveis do projeto. Entre eles podemos citar o Diagrama de Caso de Uso apresentado a seguir.
+A modelagem de \textit{software} é de extrema importância no processo de desenvolvimento de software pois ajuda a determinar as necessidades de um sistema de informação. %Ela ajuda a determinar os questionamentos que vão mapear a estrutura da aplicação. , tais como “Qual a real necessidade de se projetar este sistema? ”, existe uma diferença importante entre a modelagem e a prática da construção do sistema, isto é o desenvolvimento. Os 2 devem trabalhar juntos para o bem te todas as partes de um \textit{software}, tanto cliente quanto empresa ou desenvolvedor. E para fazer a modelagem se utiliza de diagramas que é o próximo tópico deste documento.
+%\section{DIAGRAMAS}\label{Sub:diagramas}
+Foram utilizados os conceitos de Linguagem de Modelagem Unificada (UML) %apresentados em aula na disciplina de Análise e Projeto Orientados a Objetos 
+para a modelagem de diagramas \textbf{[RCC -  colocar referência bibliográfica para UML. A aula da Márcia não serve para isso :-)]}. Através deles foi possível ter uma visão mais refinada do funcionamento do VisiUMouse e possíveis pontos instáveis do projeto. %Entre eles podemos citar o Diagrama de Caso de Uso apresentado a seguir.
 
-\subsection{Diagrama de Caso de Uso}
-O Diagrama de Caso de Uso utiliza a linguagem simples, descrevendo o comportamento externo do VisiUMouse, apresentando ele através de uma perspectiva do usuário, demonstrando as funções e funcionalidades disponíveis para o usuário. Este diagrama é o mais abstrato, flexível e informal, sendo o utilizado com mais frequência na modelagem de sistemas, sendo uma base confiável para a modelagem, segundo \citeonline{guedes2011uml}. 
+\section{Diagrama de Caso de Uso}
 
-A Figura \ref{fig:use-case-diagram} mostra o Caso de Uso do VisiUMouse, a funcionalidade dele é relativamente simples, no diagrama temos dois Atores. O Ator “usuário” é o usuário que vai utilizar o computador apenas com o movimento dos olhos, ele é o foco deste projeto. O Ator “responsável” que pode ser definido como a pessoa responsável por cuidar do usuário, podendo ser algum familiar ou profissional da área da saúde como enfermeiro(a) ou médico(a), ele vai ser responsável por apenas executar a aplicação, isto é, ele só é necessário no primeiro momento. 
+O Diagrama de Caso de Uso utiliza uma representação simples, descrevendo o comportamento externo do VisiUMouse, apresentando a solução através de uma perspectiva do usuário, demonstrando as funções e funcionalidades disponíveis. Segundo \citeonline{guedes2011uml}, este diagrama é o mais abstrato, flexível e informal, sendo o utilizado com mais frequência na modelagem de sistemas.%, sendo uma base confiável para a modelagem, . 
+
+A Figura \ref{fig:use-case-diagram} mostra o Caso de Uso do VisiUMouse. O diagrama é composto por dois atores. 
+\begin{itemize}
+\item \textit{Usuário}: ator representando o usuário que vai utilizar o computador apenas com o movimento dos olhos. %, ele é o foco deste projeto.
+
+\item  \textit{Responsável}: ator que representa a pessoa responsável por cuidar do usuário, podendo ser algum familiar ou profissional da área da saúde como enfermeiro(a) ou médico(a). Ele tema a tarefa de executar a aplicação inicialmente, isto é, ele só é necessário no primeiro momento de interação. 
+
+\end{itemize}
+
 
 \begin{figure}[H]
 \caption{Diagrama de Caso de Uso.}
@@ -304,6 +327,8 @@ A Figura \ref{fig:use-case-diagram} mostra o Caso de Uso do VisiUMouse, a funcio
 \end{figure}
 
 O início do funcionamento é marcado pela inicialização da aplicação, representado como a elipse “Iniciar aplicação” no diagrama. Em seguida é feito o reconhecimento dos olhos, representado pela elipse “Reconhecer olhos” no diagrama, a aplicação ainda define qual das duplas de olhos ele deve rastrear, esta funcionalidade é representada pela elipse “Definir olhos principais” no diagrama.  Após isto é dado o controle do \textit{mouse} para o usuário, é feita uma simulação do \textit{mouse}, representado pela elipse “Controlar mouse”, além disto é possível entrar na área de configuração a qualquer momento, representado pela elipse “Configurar”.
+
+\textbf{[RCC - O capítulo de modelagem, pra mim está mais para uma seção lá do teu desenvolvimento. São menos de 2 páginas, não vejo ele como um capítulo. Acredito que ajudaria puxar para uma seção dentro do capítulo de desenvolvimento. Tipo, tu define a arquitetura geral, e depois sai detalhando, ou modelando, a solução. Aí, até se encaixaria esses diagramas. Onde ele está posicionado atualmente, não me parece fazer muito sentido. Ou se move ele (e se ajusta o texto para fazer sentido), ou se retira. É o q eu faria...}]
 
 % \subsection{Diagrama de Classes}
 % O Diagrama de Classes é o mais utilizado e o mais importante da UML. É extremamente relevante junto com o paradigma de Orientação a Objetos. E serve de apoio para a maioria dos demais diagramas. Como o próprio nome diz, define a estrutura das classes utilizadas pelo sistema, determinando os atributos e métodos que cada classe possui, segundo \citeonline{guedes2011uml}. O Diagrama da Figura \ref{fig:diagrama-classes} apresenta o diagrama utilizado para modelagem do VisiUMouse, a classe “Detector” tem grande destaque, é ela que detecta e rastreia os olhos do usuário, ela está representada no diagrama como “Detector”. Outra classe importante é a responsável por simular o \textit{mouse}, dando o controle do computador para o usuário, está representado como “Mouse” no diagrama. E por fim a classe “Main” que é a responsável por controlar as outras classes. 
@@ -329,12 +354,17 @@ O início do funcionamento é marcado pela inicialização da aplicação, repre
 % \end{figure}
 
 \chapter{DESIGN}\label{CAP6}
-A importância do Design está no desenvolvimento de produtos (digitais ou físicos) que facilitem a vida das pessoas ele possibilita criar coisas funcionais e bonitas. O Design pode dar destaque a um produto com as mesmas funcionalidade e preço de outros. Por isso o Design é o fator decisivo no sucesso ou fracasso de um produto. Assim como um Design bem pensado desperta o desejo dos consumidores, um Design pobre e mal feito gera uma repulsa enorme, segundo \citeonline{patterson2017computer}.
 
-Este trabalho apresenta o Design do \textit{software} e site do VisiUMouse, o \textit{software} é uma tecnologia \textit{desktop} que é executado pelo usuário na área de trabalho do computador, permitindo que ele controle o computador; o site é o responsável por apresentar e disponibilizar o VisiUMouse na \textit{Web} para os usuários, entre outras funcionalidades.
+\textbf{[RCC] Sobre o capítulo de Design. Me parece que o design tbm é ligado ao desenvolvimento da solução. Uma das etapas previstas dentro da metodologia. Ou seja, não vejo motivo dele ser um capítulo a parte, e sim estar dentro da parte de desenvolvimento da aplicação propriamente dita. A interface é uma parte importante da aplicação, em especial esta aqui. Com relação ao site, acho que ele também deve aparecer, mas não sei ao certo onde mesmo. Porque ele é um instrumento de divulgação, mas não é parte da solução proposta. No entanto, também não vejo como "merecedor" de um capítulo. }
 
-\section{DESIGN DO SOFTWARE DESKTOP}\label{Sub:software}
-Para a criação da interface foram utilizados os conceitos de CRAP (Contraste, Repetição, Alinhamento e Proximidade) apresentados na disciplina de Design de Interface, a escolha da paleta de cores foram definidas através de um levantamento das principais cores das tecnologias Digitais atuais, foi feito uma pequena alteração nesta paleta para torná-la única e por consequência uma característica da própria tecnologia, as outras estilizações como sombra e tipografia foram definidas através das tendências atuais. Além de seguir boas práticas de \textit{Graphical User Interface} (GUI) para pessoas com pouca mobilidade, por exemplo botões grandes e mais afastados. A Figura \ref{fig:interface-tecnologia} mostra a tela principal do \textit{software} VisiUMouse.
+A importância do Design está no desenvolvimento de produtos (digitais ou físicos) que facilitem a vida das pessoas ele possibilita criar coisas funcionais e bonitas. O Design pode dar destaque a um produto com as mesmas funcionalidade e preço de outros. %Por isso o Design é o fator decisivo no sucesso ou fracasso de um produto. 
+Assim como um Design bem pensado desperta o desejo dos consumidores, um Design pobre e mal feito gera uma repulsa enorme \cite{patterson2017computer}.
+
+Este seção destaca o Design da Interface e do site do VisiUMouse. O VisiUMouse é uma tecnologia \textit{desktop} executada pelo usuário na área de trabalho do computador, permitindo que ele controle o computador; o site é o responsável por apresentar e disponibilizar o VisiUMouse na \textit{Web} para os usuários, entre outras funcionalidades.
+
+\section{Design da Interface Desenvolvida}\label{Sub:software}
+Para a criação da interface foram utilizados os conceitos de CRAP (Contraste, Repetição, Alinhamento e Proximidade) \textbf{[RCC - Adicionar referência bibliográfica técnica. Não deve citar que viu isso em aula. Tem que dar crédito a quem desenvolveu ou escreveu a respeito da técnica :-)]}. %apresentados na disciplina de Design de Interface, 
+A escolha da paleta de cores foi definida através de um levantamento das principais cores das tecnologias digitais atuais, foi feito uma pequena alteração nesta paleta para torná-la única e por consequência uma característica da própria tecnologia, as outras estilizações como sombra e tipografia foram definidas através das tendências atuais. Além de seguir boas práticas de \textit{Graphical User Interface} (GUI) para pessoas com pouca mobilidade, por exemplo botões grandes e mais afastados. A Figura \ref{fig:interface-tecnologia} mostra a tela principal do \textit{software} VisiUMouse.
 
 \begin{figure}[htbp]
 \caption{Interface principal do VisiUMouse.} 
@@ -344,15 +374,18 @@ Para a criação da interface foram utilizados os conceitos de CRAP (Contraste, 
 \label{fig:interface-tecnologia}
 \end{figure}
 
-\section{DESIGN DO SITE}\label{Sub:site}
+\section{Design do Site}\label{Sub:site}
 
 O desenvolvimento do site tem como objetivo disponibilizar todo o conteúdo referente ao VisiUMouse, como o próprio \textit{software}, informações, módulos que foram criados juntamento com o VisiUMouse, uma página de contato entre outros. A Figura \ref{fig:site} apresenta a página inicial do site, no topo esta presente o menu de navegação que é fixo que permite que o usuário navegue entre todo o site de forma simples.
 
 \begin{enumerate}
-\item \textbf{inicial}: esta representado como a logo do site, do lado extremo esquerdo, ao clicar nessa imagem o usuário volta para o inicio da página.
-\item \textbf{videos}: essa seção mostra um conjunto de vídeos que tem como objetivo dar uma visão geral do VisiUMouse
-\item \textbf{funcionamento}: apresenta uma explicação resumida de como utilizar o VisiUMouse.
-\item \textbf{contato}: nessa seção é possível enviar uma mensagem para o site.
+\item \textit{Inicial}: esta representado como a logo do site, do lado extremo esquerdo, ao clicar nessa imagem o usuário volta para o inicio da página;
+
+\item \textit{Vídeos}: essa seção mostra um conjunto de vídeos que tem como objetivo dar uma visão geral do VisiUMouse;
+
+\item \textit{Funcionamento}: apresenta uma explicação resumida de como utilizar o VisiUMouse;
+
+\item \textit{Contato}: nessa seção é possível enviar uma mensagem para os idealizadores da solução VisiUMouse.
 \end{enumerate}
 
 
@@ -367,90 +400,97 @@ O desenvolvimento do site tem como objetivo disponibilizar todo o conteúdo refe
 \chapter{TECNOLOGIAS UTILIZADAS}\label{CAP6-tecnilogias-utilizadas}
 Esse Capítulo apresentam o conjunto de tecnologias utilizadas e desenvolvidas nesse trabalho, por questão de organização será segmentando 2 partes, as tecnologias utilizadas no site e no software.
 
-\section{Software Desktop}\label{Sub:tecnologias-software}
-Essa sessão aponta as principais tecnologias utilizadas para o desenvolvimento da aplicação \textit{desktop}, ou seja o software que será executado pelo usuário no seu computador. A principal tecnologia utilizada foi a Linguagem de Programação Java, entre suas características podemos citar possibilidade de desenvolver em multiplataforma, isso permite que um mesmo \textit{software} seja executado em diferentes Sistemas Operacionais, como Linux, Windows, Android, entre outros. Além de Java foi utilizado a Linguagem de Programação C a biblioteca OpenCV e o \textit{software} Install Creator. 
+\section{Desenvolvimento do Software Desktop}\label{Sub:tecnologias-software}
 
-Para o desenvolvimento do \textit{software} VisiUMouse foi criado um conjunto de ferramentas para auxiliar, como um Simulador de \textit{Mouse}; um \textit{script} para otimizar o controle de versões, o Auto Commit e um protocolo para metrificar testes, o Fitts Task Two, os quais estão presentes nos tópicos seguintes.
+%Essa sessão aponta as principais tecnologias utilizadas para o desenvolvimento da aplicação \textit{desktop}, ou seja o software que será executado pelo usuário no seu computador. 
 
-\begin{enumerate}
-\item \textbf{Java}
+A principal tecnologia utilizada foi a linguagem de programação Java. entre suas principais características está a possibilidade do desenvolvimento multiplataforma, permitindo que um mesmo \textit{software} seja executado em diferentes Sistemas Operacionais%, como Linux, Windows, Android, entre outros. 
+Também foram utilizados a linguagem de programação C a biblioteca OpenCV e o software \textit{Install Creator}. 
 
-Criada pela equipe de desenvolvedores liderada por James Gosling na Sun Microsystems (atualmente de propriedade da Oracle) e lançada em 1995, o Java é uma linguagem de programação Orientada a Objetos que atualmente faz parte do núcleo da Plataforma Java. A Orientação a Objetos, ou Programação Orientada a Objetos (POO), é um tipo de paradigma de análise, para a programação de sistemas no qual todos os elementos inseridos são objetos. \cite{urma2014java}.
+Para o desenvolvimento do \textit{software} VisiUMouse foi criado um conjunto de ferramentas para auxiliar, como um Simulador de \textit{Mouse}; um \textit{script} para otimizar o controle de versões, o \textit{Auto Commit} e um protocolo para metrificar testes, o Fitts Task Two, os quais estão presentes nos tópicos seguintes. \textbf{[RCC -  eu fiquei com dúvida sobre o que foi desenvolvido. Isso tudo tem relação com o projeto? Porque não está como parte da solução lá na descrição da aplicação? Um capítulo de tecnologias tu pensa q vai apenas encontrar uma lista de coisas que foram utilizadas, e a justificativa para sua adoção.]}
 
-A linguagem Java possui arquitetura neutra e portável, de forma que pude ser utilizada em diversos Sistemas operacionais, ter alta performance, apresentar segurança e solidez e ser uma linguagem interpretada com suporte a \textit{threads} e dinâmica. As aplicações em Java normalmente podem ser executadas em qualquer plataforma que possua a Java Virtual Machine (JVM) instalada, independente da arquitetura do computador.
+\subsection{Linguagem de Programação Java}
 
-O Java utiliza o \textit{Garbage Collector} para gerenciar a memória referente ao ciclo de vida dos objetos e sua permanência nela. O programador determina quando os objetos são criados e o Java \textit{Runtime} é responsável pela retirada do objeto da memória quando ele não estiver mais em uso, evitando que este processo seja feito manualmente como nas linguagens de programação estruturada.
+Criada pela equipe de desenvolvedores liderada por James Gosling na Sun Microsystems (atualmente de propriedade da Oracle) e lançada em 1995, o Java é uma linguagem de programação Orientada a Objetos que atualmente faz parte do núcleo da plataforma Java. A Orientação a Objetos, ou Programação Orientada a Objetos (POO), é um paradigma de análise, para a programação de sistemas no qual todos os elementos inseridos são objetos \cite{urma2014java}.
+
+A linguagem Java possui arquitetura neutra e portável, de forma que pude ser utilizada em diversos Sistemas operacionais, ter alta performance, apresentar segurança e solidez e ser uma linguagem interpretada com suporte a \textit{threads} e dinâmica. As aplicações em Java normalmente podem ser executadas em qualquer plataforma que possua a \textit{Java Virtual Machine} (JVM) instalada, independente da arquitetura do computador.
+
+\textbf{[RCC - porque escolheu Java para esta aplicação? Está implícito, mas é interessante deixar claro. Esse comentário vale para todas as tecnologias adotadas no projeto]}
+
+%O Java utiliza o \textit{Garbage Collector} para gerenciar a memória referente ao ciclo de vida dos objetos e sua permanência nela. O programador determina quando os objetos são criados e o Java \textit{Runtime} é responsável pela retirada do objeto da memória quando ele não estiver mais em uso, evitando que este processo seja feito manualmente como nas linguagens de programação estruturada.
 
 
-\item \textbf{Linguagem C}
+\subsection{Linguagem de Programação C}
 
-A linguagem C foi criada por Dennis Ritchie em 1972 com um propósito: ser usada no desenvolvimento de uma nova versão do sistema operacional Unix. A primeira versão do Unix utilizava Assembly. Além de toda essa flexibilidade, C é capaz de gerar programas extremamente rápidos em tempo de execução, possui uma sintaxe simples e poderosa, com instruções de alto nível. A linguagem C influenciou de forma direta muitas linguagens como C++, Java, C\# , Objective C, e muitas outras linguagens de programação tem sua sintaxe e estruturas influenciadas por C, segundo \citeonline{backes2012linguagem}.
+A linguagem C foi criada por Dennis Ritchie em 1972 com um propósito: ser usada no desenvolvimento de uma nova versão do sistema operacional Unix. %A primeira versão do Unix utilizava Assembly. Além de toda essa flexibilidade, 
+C é capaz de gerar programas extremamente rápidos em tempo de execução, possui uma sintaxe simples e poderosa, com instruções de alto nível. A linguagem C influenciou de forma direta muitas linguagens como C++, Java, C\# , Objective C, e muitas outras linguagens de programação tem sua sintaxe e estruturas influenciadas por C, segundo \citeonline{backes2012linguagem}.
 
 Entre suas características principais podem citar: a Portabilidade, geração de códigos executáveis compactos e rápidos, interação com o Sistema Operacional e linguagem estruturada. A geração de códigos compactos e rápido ganha destaque nos algoritmos de PDI, que demandam processar uma grande quantidade de dados, os quais representam a leitura e reconhecimento de padrões dos \textit{pixels} de uma imagem.
 
-\item \textbf{OpenCV}
+\textbf{[RCC de novo, porque foi escolhida? Vai ser usada no que?]}
+
+
+\subsection{OpenCV}
 
 O OpenCV (\textit{Open Source Computer Vision Library}) é uma biblioteca multiplataforma desenvolvida pela Intel Corporation, que implementa diversos módulos para VC, este os quais são utilizados para o Processamento de Imagens e Vídeo, Estruturas de dados, álgebra linear e mais de 350 algoritmos de VC. OpenCV possui, em seu módulo central uma implementação do algoritmo de Viola-Jones para detecção de objetos, de acordo com \cite{bradski2008learning}.
 
-\item \textbf{Simulador de Mouse}
+\subsection{Simulador de Mouse}
 
 O Simulador\footnote{O Simulador está disponível em: https://github.com/KrishnaXavier/system-click-time} é uma aplicação capaz de simular um \textit{mouse} comum, com o clique com base no tempo, isto é o clique é gerado após um determinado tempo parado, esse tempo pode ser configurado, além disso ele também simula os principais cliques de um \textit{mouse}, como o clique do botão primário (geralmente é representado pelo botão esquerdo do \textit{mouse}), duplo primário, botão secundário (geralmente é representado pelo botão direito do \textit{mouse}) e a função de arrastar. Ele possibilita manter as métricas do \textit{clique} igual para testes comparativos entre diferentes dispositivos, como o experimento descrito no Capítulo \ref{CAP7}, que apresenta um teste de comparação do VisiUMouse com o \textit{mouse} tradicional.
 
-\item \textbf{Fitts Task Two}
+\subsection{\textit{Fitts Task Two}}
 
-O Fitts Task Two\footnote{O Protocolo está disponível em: https://github.com/KrishnaXavier/FittsTaskTwo} é um protocolo baseado na Lei de Fitts, proposto por \citeonline{soukoreff2004towards}, ele permite metrificar o ato de "apontar" na movimentação humana, como o controle \textit{mouse}. Ele foi criado a partir de um outro \textit{software} de código aberto disponível na \textit{internet}, boa parte do código foi mantida, foram feitas apenas altercações necessárias para realizar o experimento descrito no Capítulo \ref{CAP7}.
+O Fitts Task Two\footnote{O Protocolo está disponível em: https://github.com/KrishnaXavier/FittsTaskTwo} é um protocolo baseado na Lei de Fitts, proposto por \citeonline{soukoreff2004towards}. Ele permite metrificar o ato de "apontar" na movimentação humana, como o controle \textit{mouse}. O protocolo desenvolvido foi criado a partir de um outro \textit{software} de código aberto disponível na \textit{internet} \textbf{[RCC - qual protocolo? Referência bibliográfica para ele]}, boa parte do código foi mantida, foram feitas apenas altercações necessárias para realizar o experimento descrito no Capítulo \ref{CAP7}.
 
-\item \textbf{Auto Commit}
+\subsection{Auto Commit}
 
 O Auto Commit\footnote{O Auto Commit está disponível em: https://github.com/KrishnaXavier/auto-commit} é uma sequência de comandos implementados em um \textit{software} executável, ou seja, um \textit{script}, que permite salvar as alterações de qualquer aplicação de forma mais amigável, apenas com um comando. Esse \textit{script} foi criando visando ajudar os desenvolvedores e colegas que tinham dificuldade em salvar as alterações das suas aplicações.
 
-\end{enumerate}
 
-\section{Site}\label{Sub:tecnologias-site}
-As tecnologias utilizados no desenvolvimento do site foram divididas em 2 categorias, as que funcionam no lado do servidor (\textit{Server-side}) e as que funcionam apenas no lado do cliente e do navegador (\textit{Client-side}). Entre as tecnologias \textit{Server-side} podemos citar o PHP e MySQL. E entre as tecnologias \textit{Client-side} podemos citar HTML5, CSS, JavaScript, \textit{Framework }JQuery e \textit{Framework} Materialize. Além disso foram utilizadas as arquiteturas MVC e SPA. Para a criação da estrutura do PHP Orientado a Objetos foi desenvolvido uma ferramenta facilitar, o Creator OOP Structure.
 
-\begin{enumerate}
-\item \textbf{PHP 5}
+\section{Tecnologias utilizadas na criação do Site}\label{Sub:tecnologias-site}
+As tecnologias utilizados no desenvolvimento do site foram divididas em 2 categorias, as que funcionam no lado do servidor (\textit{Server-side}) e as que funcionam apenas no lado do cliente (\textit{Client-side}). Entre as tecnologias \textit{Server-side} podemos citar o PHP e MySQL. E entre as tecnologias \textit{Client-side} podemos citar HTML5, CSS, JavaScript, \textit{Framework }JQuery e \textit{Framework} Materialize. Além disso foram utilizadas as arquiteturas MVC e SPA. Para a criação da estrutura do PHP Orientado a Objetos foi desenvolvido uma ferramenta facilitar, o Creator OOP Structure.
 
-A linguagem de programação PHP (um acrônimo recursivo para PHP: Hypertext Preprocessor) é uma linguagem de \textit{script} de código aberto de uso geral, muito utilizada, e especialmente adequada para o desenvolvimento web e que pode ser embutida dentro do HTML. Ela frequentemente é utilizada para a comunicação com o Banco de Dados. A linguagem permite que se adicione dinamicidade aos projetos web, ou seja, o conteúdo da página é montado durante a requisição e então enviado ao cliente, segundo \citeonline{converse2003php}.
+\subsection{PHP 5}
 
-\item \textbf{MySQL}
+A linguagem de programação PHP (um acrônimo recursivo para \textit{PHP: Hypertext Preprocessor}) é uma linguagem de \textit{script} de código aberto de uso geral, muito utilizada, e especialmente adequada para o desenvolvimento web e que pode ser embutida dentro do HTML. Ela frequentemente é utilizada para a comunicação com o Banco de Dados. A linguagem permite que se adicione dinamicidade aos projetos web, ou seja, o conteúdo da página é montado durante a requisição e então enviado ao cliente, segundo \citeonline{converse2003php}.
 
-O sistema MySQL foi desenvolvido pela empresa sueca MySQL AB e publicado, originalmente, em maio de 1995. O MySQL é um sistema de gerenciamento de banco de dados (SGBD) de código aberto, que utiliza a linguagem SQL (Linguagem de Consulta Estruturada, do inglês \textit{Structured Query Language}) como interface. É atualmente um dos sistemas de gerenciamento de Bancos de Dados mais populares, com mais de 10 milhões de instalações pelo mundo, de acordo com \cite{miletto2014desenvolvimento}.
+\subsection{MySQL}
 
-\item \textbf{HTML5}
+O sistema MySQL foi desenvolvido pela empresa sueca MySQL AB e publicado, originalmente, em maio de 1995. O MySQL é um sistema de gerenciamento de banco de dados (SGBD) de código aberto, que utiliza a linguagem SQL (\textit{Structured Query Language}) como interface. É atualmente um dos sistemas de gerenciamento de Bancos de Dados mais populares, com mais de 10 milhões de instalações pelo mundo, de acordo com \cite{miletto2014desenvolvimento}.
 
-Como \citeonline{silva2015fundamentos} define, o HTML (abreviação para a expressão inglesa \textit{HyperText Markup Language}, que significa Linguagem de Marcação de Hipertexto) é uma linguagem de marcação utilizada na construção de páginas na Web. Documentos HTML podem ser interpretados por navegadores. A tecnologia é fruto da junção entre os padrões HyTime e SGML. Atualmente sua versão é a 5.0.
+\subsection{HTML5}
 
-\item \textbf{CSS3}
+Como \citeonline{silva2015fundamentos} define, o HTML (\textit{HyperText Markup Language}, que significa Linguagem de Marcação de Hipertexto) é uma linguagem de marcação utilizada na construção de páginas na Web. Documentos HTML podem ser interpretados por navegadores. A tecnologia é fruto da junção entre os padrões HyTime e SGML. Atualmente sua versão é a 5.0.
+
+\subsection{CSS3}
 
 CSS3 é a segunda mais nova versão das famosas \textit{Cascading Style Sheets} (ou simplesmente CSS), onde se define estilos para páginas web com efeitos de transição, imagem, e outros, que dão um estilo novo às páginas Web em todos os aspectos de design do layout. CSS3 ultrapassou o status de proposta de uma tecnologia que prometia revolucionar a forma como estilizamos documentos para a web e deve obrigatoriamente fazer parte do dia a dia dos designers e desenvolvedores web, segundo \citeonline{silva2011css3}.
 
-\item \textbf{JavaScript}
+\subsection{JavaScript}
 
 JavaScript é uma linguagem de programação interpretada que foi originalmente implementada como parte dos navegadores Web para que \textit{scripts} pudessem ser executados do lado do cliente e interagissem com o usuário sem a necessidade deste \textit{script} passar pelo \textit{Server-side}, controlando o navegador, realizando comunicação assíncrona e alterando o conteúdo do documento exibido. \cite{flanagan2007javascript-UPPERCASE}.
 
-\item \textbf{Framework Materialize}
+\subsection{Framework Materialize}
 
 Materialize é um \textit{framework} \textit{Client-side} que resolve os mesmos problemas como alinhamento de objetos HTML e Desgin Responsivo. Ele surgiu através de um projeto desenvolvido pela Google e é inspirado no Material Design (design utilizado no sistema operacional para \textit{smartphones} Android desde a versão 5.0).
 
-\item \textbf{Framework {j}Query}
+\subsection{Framework {j}Query}
 
 O \textit{Framework} jQuery em JavaScript permite a abstração de tarefas comuns do \textit{Client-side}, como a manipulação de elementos da página, gerenciamento de eventos, requisições e Ajax. O jQuery permitiu uma codificação rápida e direta, diminuindo o código e o tornando mais legível, o que consequentemente tornou o desenvolvimento mais eficiente, \cite{duckett2018javascript}. Com o Ajax é possível implementar a arquitetura SPA, que esta descrita no tópico seguinte.
 
-\item \textbf{Arquitetura SPA}
+\subsection{Arquitetura SPA}
 
 Um aplicativo de página única (\textit{Single Page Application}, ou SPA) é uma aplicação web ou site que consiste de uma única página web com o objetivo de fornecer uma experiência do usuário similar à de um aplicativo desktop. Em um SPA, todo o código necessário - HTML, JavaScript, e CSS – ou é obtido com um único carregamento de página, ou os recursos apropriados são carregados dinamicamente e adicionados à página conforme necessário, geralmente em resposta a ações do usuário. A página não é recarregada em qualquer momento do processo, tampouco ocorre a transferência de controle para outra página. Interação com aplicativos de página única muitas vezes envolve comunicação dinâmica com o servidor web por trás dos bastidores, de acordo com \citeonline{mikowski2013single}.
 
-\item \textbf{Arquitetura MVC}
+\subsection{Arquitetura MVC}
 
 Segundo \citeonline{teruel2012arquitetura} a arquitetura MVC é padrão de \textit{software} que permite dividir a aplicação em 3 camadas, \textit{Model}, \textit{View} e \textit{Controller}. O \textit{Model} consiste nos dados da aplicação, regras de negócios, lógica e funções. Uma \textit{View} pode ser qualquer saída de representação dos dados, como uma tabela ou um diagrama. É possível ter várias visões do mesmo dado, como um gráfico de barras para gerenciamento e uma visão tabular para contadores. O \textit{Controller} faz a mediação da entrada, convertendo-a em comandos para o \textit{Model} ou \textit{View}. As ideias centrais por trás do MVC são a reusabilidade de código e separação de conceitos.
 
-\item \textbf{Creator OOP Structure}
+\subsection{Creator OOP Structure}
 
 Creator OOP Structure\footnote{O Creator OOP Structure está disponível em: https://github.com/KrishnaXavier/creator-oop-structure}  é uma ferramenta que auxilia a criação da estrutura do PHP Orientado a Objetos de forma a deixar a codificação mais rápida, para criar toda a estrutura ele apenas precisa do nome da classe, os seus atributos e as respectivas visibilidades.
 
-\end{enumerate}
 
 
 \chapter{TUTORIAL DO VISIUMOUSE}\label{CAP-tecnologia-visiumouse}
@@ -516,17 +556,19 @@ No segundo momento é preciso clicar em "calibrar" para calibrar o VisiUMouse, o
 % Dissertação do vinicius: https://www.overleaf.com/read/gbykffbhwqtk#/42933380/
 % Capitulo 4 fala sobre os testes
 
+\textbf{[RCC - acho que deve iniciar falando do objetivo do teste, e não sair descrevendo quem executou o protocolo e tal. Só questão de organizar a ordem das coisas]}
+
 O experimento foi executado por 9 participantes voluntários, com idade média de 23,3 anos, com o objetivo de fazer uma avaliação comparativa do \textit{software} VisiUMouse com o \textit{mouse} convencional para avaliar o seu funcionamento e objetivo. Para tanto foi utilizado um protocolo baseado na lei de Fitts, proposto por \citeonline{soukoreff2004towards}, envolvendo tarefas comuns como apontar, selecionar e clicar, que são usadas como métricas para verificar a interação com o computador. O protocolo foi configurado para 6 etapas, com 5 alvos cada, podendo ter o tamanho de 120, 150 ou 180 pixeis. O tamanho (gerados aleatoriamente) de cada um dos 5 alvos são iguais para cada fase \footnote{Foi disponibilizado gravações dos testes em: http://visiumouse.com}.
 
 O teste foi dividido em 3 etapas: a primeira consistiu na aprendizagem de uso da aplicação, onde o participante era familiarizado com o funcionamento do VisiUMouse durante 5 minutos; a segunda etapa consistiu no experimento em si com o VisiUMouse; na última etapa, o participante utilizou o \textit{mouse} convencional para a execução das mesmas tarefas da etapa anterior. Os resultados são computados pelo \textit{software} do protocolo.
 
-Para as três etapas foi utilizado o clique por tempo, denominado \textit{dwell time}, segundo \citeonline{gips2000camera}, configurado para o tempo 5 segundos para efetuar o clique. Cabe ressaltar que em paralelo ao desenvolvimento do VisiUMouse foi criado um \textit{software} de clique por tempo para ser usado nos testes \footnote{Software de clique por tempo. Disponível em: http://visiumouse.com}. As demais configurações do VisiUMouse como velocidade foram mantidas iguais em todos os testes.  
+Para as três etapas foi utilizado o clique por tempo, denominado \textit{dwell time}, segundo \citeonline{gips2000camera} \textbf{[RCC - não entendi esse "segundo fulano". Não foi definido o que é Dweel time anteriormente? E ficando assim no meio da explicação do teste, fica estranha citação]}, configurado para o tempo 5 segundos para efetuar o clique. Cabe ressaltar que em paralelo ao desenvolvimento do VisiUMouse foi criado um \textit{software} de clique por tempo para ser usado nos testes\footnote{Software de clique por tempo. Disponível em: http://visiumouse.com}. As demais configurações do VisiUMouse como velocidade foram mantidas iguais em todos os testes.  
 
 O experimento foi conduzido com um notebook (LG S460) equipado com Windows 10, processador 2,4GHz (i3), 4 GB RAM, monitor de 14 polegadas, resolução de 1366 x 768 pixeis e utilizou-se a \textit{webcam} do próprio computador.
 
-O interesse do Experimento é em nível de protótipo, para tentar garantir que o desenvolvimento está no caminho certo, e para avaliar se o produto final atende ao público-alvo, porém quando se trata de pessoas com deficiência motora, no primeiro momento é necessário uma rodada de testes com pessoas sem nenhuma deficiência, conforme \cite{stone2005user}, para que os testes com o público-alvo já estejam cuidadosamente planejados e refinados. Além de buscar, com os profissionais da área de Terapia Ocupacional, conforme \cite{oliveira2015uso}, aspectos multidisciplinares relacionados a prescrição, habilidades e necessidades dos usuários.
+O interesse do experimento é em nível de protótipo, para tentar garantir que o desenvolvimento está no caminho certo, e para avaliar se o produto final atende ao público-alvo, porém quando se trata de pessoas com deficiência motora, no primeiro momento é necessário uma rodada de testes com pessoas sem nenhuma deficiência, conforme \cite{stone2005user} \textbf{[RCC - de novo, ficou estranha essa citação no meio da explicação.]}, para que os testes com o público-alvo já estejam cuidadosamente planejados e refinados. Além de buscar, com os profissionais da área de Terapia Ocupacional, conforme \cite{oliveira2015uso}, aspectos multidisciplinares relacionados a prescrição, habilidades e necessidades dos usuários.
 
-\section{RESULTADOS}\label{Sub:resultados-ex-1}
+\section{Resultados alcançados}\label{Sub:resultados-ex-1}
 A Figura \ref{fig:assertividade} apresenta o gráfico dos resultados da assertividade dos cliques nos alvos. O software VisiUMouse (VUM, em azul) teve assertividade média de 99,63\%, representando apenas um erro com o participante 8. O \textit{mouse} comum (Mouse, em laranja) teve assertividade de 100\%, que já era esperado devido a grande familiaridade que os usuários já tinham com este dispositivo.
 
 \begin{figure}[htbp]
@@ -540,19 +582,24 @@ A Figura \ref{fig:assertividade} apresenta o gráfico dos resultados da assertiv
 A Figura \ref{fig:tmc} apresenta o gráfico com os resultados do tempo médio de cada clique (TMC), em milissegundos. O TMC do \textit{mouse} comum foi de aproximadamente 6372,4 milissegundos. O VisiUMouse (VUM) teve o TMC de aproximadamente 16579,5 milissegundos.
 \begin{figure}[htbp]
 \caption{Resultados do teste comparativo.} 
-\centering \includegraphics[scale=1.5]{img/tmc2.png}
+\centering \includegraphics[scale=1]{img/tmc2.png}
 
 {\fontsize{11}{11}\selectfont \textbf{Fonte:} Elaborada pelo autor.}
 \label{fig:tmc}
 \end{figure}
 
-\chapter{CONSIDERAÇÕES FINAIS E TRABALHOS FUTUROS}\label{CAP-consideracoes-finais-trabalhos-futuros}
+
+\textbf{[RCC - acho que no final falta algum parágrafo fechando a análise dos testes. O que foi bom, o que foi ruim. Se foi dentro do esperado.]}
+
+\chapter{Conclusões}\label{CAP-consideracoes-finais-trabalhos-futuros}
 
 A solução proposta, o VisiUMouse, está disponível para qualquer pessoa que tenha acesso a \textit{internet}, no site "www.VisiUMouse.com", para qualquer tipo de usuário ou estudo, entre outras aplicações. Apesar de já ter lançado uma versão final (alpha) ainda podem ser desenvolvidas outras versões, de acordo com a necessidade dos usuários.
 
 Entre os desafios enfrentados se destacou o estudo e implementação relacionados as áreas de VC, \textit{Machine Learning} e aplicações \textit{desktop}. Esses desafios foram ultrapassados com uma grande força de vontade e ambição de fazer algo diferente.
 
-Esse trabalho só foi possível por causa te todas as pessoas envolvidas, como orientadores e professores; experiências adquiridas em grupos de pesquisa como WeTech e IOM; e os conhecimentos adquiridos no curso, os quais estão presente nesse trabalho.
+Esse trabalho só foi possível por causa de todas as pessoas envolvidas, como orientadores e professores; experiências adquiridas em grupos de pesquisa como WeTech e IOM; e os conhecimentos adquiridos no curso, os quais estão presente nesse trabalho.
+
+\section{Trabalhos Futuros}
 
 Entre os trabalhos futuros estão a implementação do rastreamento da visão, para os usuários que não tem a movimentação da cabeça; a implementação de uma aplicação para dispositivos móveis (celulares e \textit{tablets}) com as mesmas funcionalidades do VisiUMouse; e uma versão do VisiUMouse para macOS (Sistema Operacional da Apple).
 
