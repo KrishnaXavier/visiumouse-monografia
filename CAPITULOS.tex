@@ -373,11 +373,11 @@ O desenvolvimento do site tem como objetivo disponibilizar todo o conteúdo refe
 \end{figure}
 
 \chapter{TECNOLOGIAS UTILIZADAS}\label{CAP6-tecnilogias-utilizadas}
-Esse Capítulo apresentam o conjunto de tecnologias utilizadas e desenvolvidas nesse trabalho, por questão de organização será segmentando 2 partes, as tecnologias utilizadas no software e site.
+Neste capítulo, serão apresentadas as tecnologias utilizadas e desenvolvidas nesse trabalho, por questão de organização será segmentando 2 partes, as tecnologias utilizadas no software e site.
 
 \section{Desenvolvimento do Software Desktop}\label{Sub:tecnologias-software}
 
-A principal tecnologia utilizada foi a linguagem de programação Java. entre suas principais características está a possibilidade do desenvolvimento multiplataforma, permitindo que um mesmo \textit{software} seja executado em diferentes Sistemas Operacionai. Também foram utilizados a linguagem de programação C e a biblioteca OpenCV. A linguagem C foi responsável pelos algoritmos de processamento de imagens, por se tratar de uma tecnologia de baixo nível ela apresenta uma alta eficácia no processamento de dados, essa característica é de extrema importância em soluções que precisam de um alto poder computacional.
+A principal tecnologia utilizada foi a linguagem de programação Java, entre suas principais características está a possibilidade do desenvolvimento multiplataforma, permitindo que um mesmo \textit{software} seja executado em diferentes Sistemas Operacionai. Também foram utilizados a linguagem de programação C e a biblioteca OpenCV. A linguagem C foi responsável pelos algoritmos de processamento de imagens, por se tratar de uma tecnologia de baixo nível ela apresenta uma alta eficácia no processamento de dados, essa característica é de extrema importância em soluções que precisam de um alto poder computacional.
 
 Para o desenvolvimento do \textit{software} VisiUMouse foi criado um conjunto de ferramentas para auxiliar, como um Simulador de \textit{Mouse}; um \textit{script} para otimizar o controle de versões, o \textit{Auto Commit} e um protocolo para metrificar testes, o Fitts Task Two, os quais estão presentes nos tópicos seguintes.
 
@@ -393,7 +393,7 @@ Entre os pontos que justificam a escolha da plataforma Java, podemos destacar: o
 
 A linguagem C foi criada por Dennis Ritchie em 1972 com um propósito: ser usada no desenvolvimento de uma nova versão do sistema operacional Unix. C é capaz de gerar programas extremamente rápidos em tempo de execução, possui uma sintaxe simples e poderosa, com instruções de alto nível. A linguagem C influenciou de forma direta muitas linguagens como C++, Java, C\# , Objective C, e muitas outras linguagens de programação tem sua sintaxe e estruturas influenciadas por C, segundo \citeonline{backes2012linguagem}.
 
-Entre suas características principais podem citar: a Portabilidade, geração de códigos executáveis compactos e rápidos, interação com o Sistema Operacional e linguagem estruturada. A geração de códigos compactos e rápido ganha destaque nos algoritmos de PDI, que demandam processar uma grande quantidade de dados, os quais representam a leitura e reconhecimento de padrões dos píxeis de uma imagem.
+Entre suas características principais podem citar: a Portabilidade, geração de códigos executáveis compactos e rápidos, interação com o Sistema Operacional e linguagem estruturada. A geração de códigos compactos e rápido ganha destaque nos algoritmos de PDI.
 
 Entre os pontos que justificam a escolha da linguagem C, podemos destacar: alto poder de processamento, interação com o Sistema Operacional e compatibilidade com a biblioteca OpenCV.
 
@@ -403,7 +403,7 @@ O OpenCV (\textit{Open Source Computer Vision Library}) é uma biblioteca multip
 
 \subsection{Simulador de Mouse}
 
-O Simulador\footnote{O Simulador está disponível em: https://github.com/KrishnaXavier/system-click-time} é uma aplicação capaz de simular um \textit{mouse} comum, com o clique com base no tempo, isto é o clique é gerado após um determinado tempo parado, esse tempo pode ser configurado, além disso ele também simula os principais cliques de um \textit{mouse}, como o clique do botão primário (geralmente é representado pelo botão esquerdo do \textit{mouse}), duplo primário, botão secundário (geralmente é representado pelo botão direito do \textit{mouse}) e a função de arrastar. Ele possibilita manter as métricas do \textit{clique} igual para testes comparativos entre diferentes dispositivos, como o experimento descrito no Capítulo \ref{CAP7}, que apresenta um teste de comparação do VisiUMouse com o \textit{mouse} tradicional.
+O Simulador\footnote{O Simulador está disponível em: https://github.com/KrishnaXavier/system-click-time} é uma aplicação capaz de simular um \textit{mouse} comum, com o clique com base no tempo, isto é o clique é gerado após um determinado tempo parado, esse tempo pode ser configurado, além disso ele também simula os principais cliques de um \textit{mouse}, como o clique do botão primário (geralmente é representado pelo botão esquerdo do \textit{mouse}), duplo primário, botão secundário (geralmente é representado pelo botão direito do \textit{mouse}) e a função de arrastar. Ele possibilita manter as métricas do clique igual para testes comparativos entre diferentes dispositivos, como o experimento descrito no Capítulo \ref{CAP7}, que apresenta um teste de comparação do VisiUMouse com o \textit{mouse} tradicional.
 
 
 \subsection{\textit{Fitts Task Two}}
@@ -418,6 +418,8 @@ O Auto Commit\footnote{O Auto Commit está disponível em: https://github.com/Kr
 
 \section{Tecnologias utilizadas na criação do Site}\label{Sub:tecnologias-site}
 As tecnologias utilizados no desenvolvimento do site foram divididas em 2 categorias, as que funcionam no lado do servidor (\textit{Server-side}) e as que funcionam apenas no lado do cliente (\textit{Client-side}). Entre as tecnologias \textit{Server-side} podemos citar o PHP e MySQL. E entre as tecnologias \textit{Client-side} podemos citar HTML5, CSS, JavaScript, \textit{Framework }JQuery e \textit{Framework} Materialize. Além disso foram utilizadas as arquiteturas MVC e SPA. Para a criação da estrutura do PHP Orientado a Objetos foi desenvolvido uma ferramenta, o Creator OOP Structure.
+
+A escolha das tecnologias para o desenvolvimento do site se deu pelo fato de serem tecnologias consagradas na área de desenvolvimento web. Todas elas dispõe de um acervo grande de documentação e livros, além de contar com constantes atualizações e melhorias.
 
 \subsection{PHP 5}
 
@@ -449,7 +451,7 @@ O \textit{Framework} jQuery em JavaScript permite a abstração de tarefas comun
 
 \subsection{Arquitetura SPA}
 
-Um aplicativo de página única (\textit{Single Page Application}, ou SPA) é uma aplicação web ou site que consiste de uma única página web com o objetivo de fornecer uma experiência do usuário similar à de um aplicativo desktop. Em um SPA, todo o código necessário - HTML, JavaScript, e CSS – ou é obtido com um único carregamento de página, ou os recursos apropriados são carregados dinamicamente e adicionados à página conforme necessário, geralmente em resposta a ações do usuário. A página não é recarregada em qualquer momento do processo, tampouco ocorre a transferência de controle para outra página. Interação com aplicativos de página única muitas vezes envolve comunicação dinâmica com o servidor web por trás dos bastidores, de acordo com \citeonline{mikowski2013single}.
+Um aplicativo de página única (\textit{Single Page Application}, ou SPA) é uma aplicação web ou site que consiste de uma única página web com o objetivo de fornecer uma experiência do usuário similar à de um aplicativo desktop. Em uma SPA, todo o código necessário - HTML, JavaScript, e CSS – ou é obtido com um único carregamento de página, ou os recursos apropriados são carregados dinamicamente e adicionados à página conforme necessário, geralmente em resposta a ações do usuário. A página não é recarregada em qualquer momento do processo, tampouco ocorre a transferência de controle para outra página. Interação com aplicativos de página única muitas vezes envolve comunicação dinâmica com o servidor web por trás dos bastidores, de acordo com \citeonline{mikowski2013single}.
 
 \subsection{Arquitetura MVC}
 
@@ -458,6 +460,12 @@ Segundo \citeonline{teruel2012arquitetura} a arquitetura MVC é padrão de \text
 \subsection{Creator OOP Structure}
 
 Creator OOP Structure\footnote{O Creator OOP Structure está disponível em: https://github.com/KrishnaXavier/creator-oop-structure}  é uma ferramenta que auxilia a criação da estrutura do PHP Orientado a Objetos de forma a deixar a codificação mais rápida, para criar toda a estrutura ele apenas precisa do nome da classe, os seus atributos e as respectivas visibilidades.
+
+\section{Controle de Versões}
+Controle de Versões ou Sistema de Controle de Versões (ou ainda \textit{Control Version System}, {CVS}) é o processo pelo o qual um \textit{software} (seja um site ou aplicação \textit{desktop}) pode manter todo o histórico de alterações, seja uma pequena alteração como um correção ou melhoria ou uma grande alteração como a criação de uma nova funcionalidade, além de salvar quem e quando foi feita cada alteração. Outro ponto importante é que CVS permite o controle complexo de versões, ou seja, é possível desenhar todo o fluxo de desenvolvimento. 
+
+Para o processo de CVS do VisiUMouse (site e aplicação \textit{desktop}) foi utilizado a ferramenta Git, que é uma tecnologia que permite o CVS de forma simples e prática, e como repositório do versionamento foi utilizado o GitHub. O GitHub é o maior repositório de \textit{software} de código aberto do mundo.
+
 
 
 \chapter{AVALIAÇÃO}\label{CAP7}
