@@ -103,7 +103,6 @@ Podemos dizer que metodologia é a explicação detalhada e exata de toda ação
 
 O objetivo geral do trabalho é desenvolver uma TA com base em VC que permita uma pessoa com deficiência físico motora (principalmente os membros superiores) consiga controlar o seu computador apenas com o movimento da cabeça (usando os olhos como pontos de referência), através da manipulação do movimento e cliques do \textit{mouse}.
 
-
 Entre os objetivos específicos podemos citar: 
 \begin{enumerate}
 \item O desenvolvimento do VisiUMouse para multiplataformas.
@@ -114,13 +113,11 @@ Entre os objetivos específicos podemos citar:
 \item Criar uma interface de configuração amigável e de utilização simples.
 \end{enumerate}
 
-Para isto foi necessário fazer uma pesquisa de possíveis TA, estudos relacionados e testes avaliativos para determinar a viabilidade do desenvolvimento dos objetivos propostos.
+A metodologia utilizada foi exploratória, com o objetivo de investigar e analisar soluções semelhantes ao VisiUMouse, para determinar quais melhorias o VisiUMouse poderia apresentar em relação as TA disponíveis.  
     
 \section{TRABALHOS RELACIONADOS}\label{Sub:trabalhos-relacionados}
 
 Existem vários tipos de  \textit{softwares} de TA, e a seguir são apresentados alguns. Parte deles são utilizados para a comunicação com outras pessoas, porém existem outros que tem como objetivo a independência, o qual permite que seus usuários exerçam atividades sozinhos ou com a mínima ajuda possível, ou seja, torna o usuário mais autônomo.
-
-%Foi feito um Mapeamento Sistêmico com cerca de 2000 artigos, que foram utilizados como referência para o levantamento dos Trabalhos Relacionados. \cite{da2018best-UPPERCASE}.
 
 Existem diversos projetos, produtos e estudos em TA, baseados na VC, que utilizam-se de \textit{softwares} para detecção de objetos através de uma \textit{webcam} \cite{ramos2016letras} , \cite{gips2000camera}, \cite{bian2016facial}, \cite{marnik2014blinkmouse}. A detecção dos movimentos nesses projetos é feita através de uma entrada de vídeo que rastreia várias partes do corpo humano, sendo que a mais comum é o rastreamento de movimentos da cabeça (\textit{video-based}). \cite{al2013eye-UPPERCASE}. 
 
@@ -187,6 +184,35 @@ Para o desenvolvimento desse trabalho foi utilizado o método de Design Centrado
 Além disso foi utilizado a Metodologia Ágil SCRUM, nele os projetos são divididos em ciclos chamados de \textit{Sprints}. O \textit{Sprint} representa um \textit{Time Box} dentro do qual um conjunto de atividades deve ser executado. O SCRUM foi utilizado principalmente para organizar a prioridade das \textit{Sprints} relacionadas ao desenvolvimento, para garantir as datas de entrega e a organização do tempo disponível, segundo \citeonline{miner2012mapreduce}.
 
 Para realizar os objetos desse trabalho, todo desenvolvimento do \textit{software} do VisiUMouse foi organizado em 3 ciclos: \textbf{Validação}, \textbf{Experimento} e \textbf{Melhoria}. A \textbf{Validação} foi ciclo inicial da criação da solução e tinha como objetivo validar a solução proposta, para validar foi criado um MVP, que tinha como principal funcionalidade o rastreamento dos olhos e o controle do \textit{mouse}; O \textbf{Experimento} teve como objetivo comprovar seu funcionamento, de uma tecnologia que permite o controle do \textit{mouse} apenas com o movimento da cabeça, além de levantar possíveis melhorias, como um autoajuste dos parâmetros de rastreamento e otimizar os algoritmos de processamento de vídeo; O último ciclo, \textbf{Melhoria},  compreendeu em implementar as melhorias levantadas no ciclo de \textbf{Experimento}, e após disponibilizar uma versão do \textit{software} do VisiUMouse no site oficial 'www.visiumouse.com'.
+
+\chapter{MODELAGEM}\label{CAP5}
+
+Segundo \citeonline{pressman2016engenharia}, a modelagem de \textit{software} é de extrema importância no processo de desenvolvimento pois ajuda a determinar as necessidades de um sistema de informação. Foram utilizados os conceitos de Linguagem de Modelagem Unificada (UML) para a modelagem de diagramas. Através deles foi possível ter uma visão mais refinada do funcionamento do VisiUMouse e possíveis pontos instáveis do projeto.
+
+\section{Diagrama de Caso de Uso}
+O Diagrama de Caso de Uso utiliza uma representação simples, descrevendo o comportamento externo do VisiUMouse, apresentando a solução através de uma perspectiva do usuário, demonstrando as funções e funcionalidades disponíveis. Segundo \citeonline{guedes2011uml}, este diagrama é o mais abstrato, flexível e informal, sendo o utilizado com mais frequência na modelagem de sistemas.%, sendo uma base confiável para a modelagem, . 
+
+A Figura \ref{fig:use-case-diagram} mostra o Caso de Uso do VisiUMouse. O diagrama é composto por dois atores. 
+\begin{itemize}
+\item \textit{Usuário}: ator representando o usuário que vai utilizar o computador apenas com o movimento dos olhos. %, ele é o foco deste projeto.
+
+\item  \textit{Responsável}: ator que representa a pessoa responsável por cuidar do usuário, podendo ser algum familiar ou profissional da área da saúde como enfermeiro(a) ou médico(a). Ele tema a tarefa de executar a aplicação inicialmente, isto é, ele só é necessário no primeiro momento de interação. 
+
+\end{itemize}
+
+
+\begin{figure}[H]
+\caption{Diagrama de Caso de Uso.}
+\centering \includegraphics[scale=.5]{img/UseCase_Diagram_2.png}
+
+{\fontsize{11}{11}\selectfont \textbf{Fonte:} Elaborada pelo autor.}
+\label{fig:use-case-diagram}
+\end{figure}
+
+O início do funcionamento é marcado pela inicialização da aplicação, representado como a elipse “Iniciar aplicação” no diagrama. Em seguida é feito o reconhecimento dos olhos, representado pela elipse “Reconhecer olhos” no diagrama, a aplicação ainda define qual das duplas de olhos ele deve rastrear, esta funcionalidade é representada pela elipse “Definir olhos principais” no diagrama.  Após isto é dado o controle do \textit{mouse} para o usuário, é feita uma simulação do \textit{mouse}, representado pela elipse “Controlar mouse”, além disto é possível entrar na área de configuração a qualquer momento, representado pela elipse “Configurar”.
+
+
+% \textbf{[RCC - O capítulo de modelagem, pra mim está mais para uma seção lá do teu desenvolvimento. São menos de 2 páginas, não vejo ele como um capítulo. Acredito que ajudaria puxar para uma seção dentro do capítulo de desenvolvimento. Tipo, tu define a arquitetura geral, e depois sai detalhando, ou modelando, a solução. Aí, até se encaixaria esses diagramas. Onde ele está posicionado atualmente, não me parece fazer muito sentido. Ou se move ele (e se ajusta o texto para fazer sentido), ou se retira. É o q eu faria...}]
 
 
 \chapter{VISIUMOUSE}\label{CAP4}
@@ -305,68 +331,15 @@ No site é disponibilizado o VisiUMouse para \textit{download}, o usuário tem a
 \end{figure}
 
 
-\chapter{MODELAGEM}\label{CAP5}
 
-Segundo \citeonline{pressman2016engenharia}, a modelagem de \textit{software} é de extrema importância no processo de desenvolvimento pois ajuda a determinar as necessidades de um sistema de informação. Foram utilizados os conceitos de Linguagem de Modelagem Unificada (UML) para a modelagem de diagramas. Através deles foi possível ter uma visão mais refinada do funcionamento do VisiUMouse e possíveis pontos instáveis do projeto.
-
-\section{Diagrama de Caso de Uso}
-O Diagrama de Caso de Uso utiliza uma representação simples, descrevendo o comportamento externo do VisiUMouse, apresentando a solução através de uma perspectiva do usuário, demonstrando as funções e funcionalidades disponíveis. Segundo \citeonline{guedes2011uml}, este diagrama é o mais abstrato, flexível e informal, sendo o utilizado com mais frequência na modelagem de sistemas.%, sendo uma base confiável para a modelagem, . 
-
-A Figura \ref{fig:use-case-diagram} mostra o Caso de Uso do VisiUMouse. O diagrama é composto por dois atores. 
-\begin{itemize}
-\item \textit{Usuário}: ator representando o usuário que vai utilizar o computador apenas com o movimento dos olhos. %, ele é o foco deste projeto.
-
-\item  \textit{Responsável}: ator que representa a pessoa responsável por cuidar do usuário, podendo ser algum familiar ou profissional da área da saúde como enfermeiro(a) ou médico(a). Ele tema a tarefa de executar a aplicação inicialmente, isto é, ele só é necessário no primeiro momento de interação. 
-
-\end{itemize}
-
-
-\begin{figure}[H]
-\caption{Diagrama de Caso de Uso.}
-\centering \includegraphics[scale=.5]{img/UseCase_Diagram_2.png}
-
-{\fontsize{11}{11}\selectfont \textbf{Fonte:} Elaborada pelo autor.}
-\label{fig:use-case-diagram}
-\end{figure}
-
-O início do funcionamento é marcado pela inicialização da aplicação, representado como a elipse “Iniciar aplicação” no diagrama. Em seguida é feito o reconhecimento dos olhos, representado pela elipse “Reconhecer olhos” no diagrama, a aplicação ainda define qual das duplas de olhos ele deve rastrear, esta funcionalidade é representada pela elipse “Definir olhos principais” no diagrama.  Após isto é dado o controle do \textit{mouse} para o usuário, é feita uma simulação do \textit{mouse}, representado pela elipse “Controlar mouse”, além disto é possível entrar na área de configuração a qualquer momento, representado pela elipse “Configurar”.
-
-\textbf{[RCC - O capítulo de modelagem, pra mim está mais para uma seção lá do teu desenvolvimento. São menos de 2 páginas, não vejo ele como um capítulo. Acredito que ajudaria puxar para uma seção dentro do capítulo de desenvolvimento. Tipo, tu define a arquitetura geral, e depois sai detalhando, ou modelando, a solução. Aí, até se encaixaria esses diagramas. Onde ele está posicionado atualmente, não me parece fazer muito sentido. Ou se move ele (e se ajusta o texto para fazer sentido), ou se retira. É o q eu faria...}]
-
-% \subsection{Diagrama de Classes}
-% O Diagrama de Classes é o mais utilizado e o mais importante da UML. É extremamente relevante junto com o paradigma de Orientação a Objetos. E serve de apoio para a maioria dos demais diagramas. Como o próprio nome diz, define a estrutura das classes utilizadas pelo sistema, determinando os atributos e métodos que cada classe possui, segundo \citeonline{guedes2011uml}. O Diagrama da Figura \ref{fig:diagrama-classes} apresenta o diagrama utilizado para modelagem do VisiUMouse, a classe “Detector” tem grande destaque, é ela que detecta e rastreia os olhos do usuário, ela está representada no diagrama como “Detector”. Outra classe importante é a responsável por simular o \textit{mouse}, dando o controle do computador para o usuário, está representado como “Mouse” no diagrama. E por fim a classe “Main” que é a responsável por controlar as outras classes. 
-
-% \begin{figure}[htbp]
-% \caption{Diagrama de Classes.} 
-% \centering \includegraphics[scale=1]{img/diagrama-classes.png}
-% \textbf{Fonte:} Autor.
-% \label{fig:diagrama-classes}
-% \end{figure}
-
-
-% \subsection{Diagrama de Sequência}
-% O Diagrama de Sequência apresenta a ordem temporal em que as mensagens são trocadas entre os objetos envolvidos em uma determinada função. Em geral, baseia-se em um Caso de Uso definido pelo diagrama de mesmo nome e tem como base o Diagrama de Classes para determinar os objetos das classes envolvidas em um processo, segundo \citeonline{guedes2011uml}. A Figura \ref{fig:diagrama-sequencia} apresenta o Diagrama de Sequência do VisiUMouse.
-
-% O início da representação temporal do diagrama é dada pela ação do Ator “Usuário”, no momento que ele iniciar a aplicação “1.1 init app()”, o qual vai começar a detectar os olhos na entrada de vídeo, ou seja no momento que o programa foi executado e a entrada de vídeo (\textit{webcam}) estiver fornecendo dados a aplicação vai detectar todos os olhos presentes no vídeo. Quando a aplicação identifica mais de uma dupla de olhos é determina qual dupla deve ser rastrear e usada para controlar o computador, esta funcionalidade está representada no diagrama como “3.1 Detectar Olhos”. E na etapa final é dado o controle do computador para o usuário através da simulação das funcionalidades do \textit{mouse}, no diagrama está representado como “”3.2 Controlar mouse()”. 
-
-% \begin{figure}[htbp]
-% \caption{Diagrama de Sequencia.}
-% \centering \includegraphics[scale=1]{img/diagrama-sequencia.png}
-% \textbf{Fonte:} Autor.
-% \label{fig:diagrama-sequencia}
-% \end{figure}
-
-\chapter{DESIGN}\label{CAP6}
-
-\textbf{[RCC] Sobre o capítulo de Design. Me parece que o design tbm é ligado ao desenvolvimento da solução. Uma das etapas previstas dentro da metodologia. Ou seja, não vejo motivo dele ser um capítulo a parte, e sim estar dentro da parte de desenvolvimento da aplicação propriamente dita. A interface é uma parte importante da aplicação, em especial esta aqui. Com relação ao site, acho que ele também deve aparecer, mas não sei ao certo onde mesmo. Porque ele é um instrumento de divulgação, mas não é parte da solução proposta. No entanto, também não vejo como "merecedor" de um capítulo. }
+\section{DESIGN}\label{CAP6}
 
 A importância do Design está no desenvolvimento de produtos (digitais ou físicos). O Design pode dar destaque a um produto com as mesmas funcionalidades e preço de outro produto. Assim como um Design bem pensado desperta o desejo dos consumidores, um Design pobre e mal feito gera uma repulsa enorme \cite{patterson2017computer}.
 
 Este seção destaca o Design da Interface e do site do VisiUMouse. O VisiUMouse é uma tecnologia \textit{desktop} executada pelo usuário na área de trabalho do computador, permitindo que ele controle o computador; o site é o responsável por apresentar e disponibilizar o VisiUMouse na \textit{Web} para os usuários, entre outras funcionalidades.
 
-\section{Design da Interface Desenvolvida}\label{Sub:software}
-Para a criação da interface foram utilizados os conceitos de CRAP (Contraste, Repetição, Alinhamento e Proximidade) \textbf{[RCC - Adicionar referência bibliográfica técnica. Não deve citar que viu isso em aula. Tem que dar crédito a quem desenvolveu ou escreveu a respeito da técnica :-)]}. %apresentados na disciplina de Design de Interface, 
-A escolha da paleta de cores foi definida através de um levantamento das principais cores das tecnologias digitais atuais, foi feito uma pequena alteração nesta paleta para torná-la única e por consequência uma característica da própria tecnologia, as outras estilizações como sombra e tipografia foram definidas através das tendências atuais. Além de seguir boas práticas de \textit{Graphical User Interface} (GUI) para pessoas com pouca mobilidade, por exemplo botões grandes e mais afastados. A Figura \ref{fig:interface-tecnologia} mostra a tela principal do \textit{software} VisiUMouse.
+\subsection{Design da Interface Desenvolvida}\label{Sub:software}
+Para a criação da interface foram utilizados os conceitos de CRAP (Contraste, Repetição, Alinhamento e Proximidade),de acordo com \citeonline{williams2005design}. A escolha da paleta de cores foi definida através de um levantamento das principais cores das tecnologias digitais atuais, foi feito uma pequena alteração nesta paleta para torná-la única e por consequência uma característica da própria tecnologia, as outras estilizações como sombra e tipografia foram definidas através das tendências atuais. Além de seguir boas práticas de \textit{Graphical User Interface} (GUI) para pessoas com pouca mobilidade, por exemplo botões grandes e mais afastados. A Figura \ref{fig:interface-tecnologia} mostra a tela principal do \textit{software} VisiUMouse.
 
 \begin{figure}[htbp]
 \caption{Interface principal do VisiUMouse.} 
@@ -376,7 +349,7 @@ A escolha da paleta de cores foi definida através de um levantamento das princi
 \label{fig:interface-tecnologia}
 \end{figure}
 
-\section{Design do Site}\label{Sub:site}
+\subsection{Design do Site}\label{Sub:site}
 
 O desenvolvimento do site tem como objetivo disponibilizar todo o conteúdo referente ao VisiUMouse, como o próprio \textit{software}, informações, módulos que foram criados juntamento com o VisiUMouse, uma página de contato entre outros. A Figura \ref{fig:site} apresenta a página inicial do site, no topo esta presente o menu de navegação que é fixo que permite que o usuário navegue entre todo o site de forma simples.
 
@@ -489,58 +462,6 @@ Segundo \citeonline{teruel2012arquitetura} a arquitetura MVC é padrão de \text
 Creator OOP Structure\footnote{O Creator OOP Structure está disponível em: https://github.com/KrishnaXavier/creator-oop-structure}  é uma ferramenta que auxilia a criação da estrutura do PHP Orientado a Objetos de forma a deixar a codificação mais rápida, para criar toda a estrutura ele apenas precisa do nome da classe, os seus atributos e as respectivas visibilidades.
 
 
-
-\chapter{TUTORIAL DO VISIUMOUSE}\label{CAP-tecnologia-visiumouse}
-Neste Capítulo é manifestado a visão do usuário final, desde o cadastro e entrada no site para fazer o \textit{download}, até a instalação e uso do VisiUMouse. 
-
-\section{Download do VisiUMouse}
-Para qualquer usuário que deseja fazer o \textit{download} do VisiUMouse é obrigatório o cadastro, caso não tenha se cadastrado antes, caso já tenha se cadastrado em um outro momento é preciso apenas efetuar a entrada (\textit{login}), para isso foi criado uma sessão no menu que corresponde a essas funcionalidades, a 'ENTRAR', na Figura \ref{fig:site-entrar} podemos ver essa opção no canto superior direito, marcado com vermelho. Ao clicar nessa opção o usuário vai entrar na página, como mostrado em 'Página de entrada', a qual ele pode inserir seus dados para entrar no site, porém caso ele não tenha se cadastrado ele pode clicar em 'CADASTRAR', ainda na mesma página, após clicar em 'CADASTRAR' é carregado a página de cadastro, como mostrado na Figura \ref{fig:site-entrar} na 'Página de cadastro'. Para fazer o cadastro é necessário o usuário informar seus dados pessoais, se alguma informação estiver incorreta o próprio site vai indicar. 
-
-\begin{figure}[H]
-\caption{Páginas de cadastro e entrada de usuários do site.} 
-\centering \includegraphics[scale=0.45]{img/site-entrar.png}
-
-{\fontsize{11}{11}\selectfont \textbf{Fonte:} Elaborada pelo autor.}
-\label{fig:site-entrar}
-\end{figure}
-
-Após a entrada do usuário no site é possível fazer o \textit{download} do VisiUMouse, nessa página ele pode ver uma tabela com características de cada versão, como mostrado na Figura \ref{fig:site-download}.
-
-
-\section{Instalando o VisiUMouse}
-A instalação do VisiUMouse segue o padrão de outros instaladores de \textit{softwares} disponíveis no mercado, a primeira tela é de apresentação, explicando o que o instalador vai fazer e se o usuário concorda; uma tela onde é configurado a pasta onde o VisiUMouse vai ser instalado; uma tela para iniciar a instalação; e, por fim, uma tela avisando que o VisiUMouse já foi instalado, como mostrado na Figura \ref{fig:visiumouse-instalador}.
-
-\begin{figure}[H]
-\caption{Telas de instalação do VisiUMouse.} 
-\centering \includegraphics[scale=0.45]{img/software-instalador.png}
-
-{\fontsize{11}{11}\selectfont \textbf{Fonte:} Elaborada pelo autor.}
-\label{fig:visiumouse-instalador}
-\end{figure}
-
-\section{VisiUMouse}
-Após a instalação, o VisiUMouse pode ser executado através de um atalho que foi criado na área de trabalho. A primeira tela que renderizada é a tela principal da GUI, como vista na Figura \ref{fig:visiumouse-tela-principal}, é ela que tem os primeiros passos para iniciar o controle do movimento e clique do \textit{mouse}. No primeiro momento é preciso clicar no botão 'iniciar', para iniciar a \textit{webcam}.
-
-\begin{figure}[H]
-\caption{Tela principal do VisiUMouse.} 
-\centering \includegraphics[scale=.5]{img/visiumouse-tela-principal-v216.png}
-
-\textbf{Fonte:} Elaborada pelo autor.
-\label{fig:visiumouse-tela-principal}
-\end{figure}
-
-A inicialização da \textit{webcam} é dada pela tela de captura de vídeo, como visto na Figura \ref{fig:visiumouse-tela-captura-video}, ela permite que e o usuário tenha o retorno se ele esta posicionado no centro da tela, e se é possível rastrear seus olhos, os retângulos vermelho em volta dos olhos mostram o rastreamento dos olhos. Nessa tela o usuário pode ver o 'MODO' da aplicação, como visto no canto superior esquerdo da Figura, podendo dar 3 avisos: 'FUNCIONAL' mostrando que já é possível controlar o movimento do \textit{mouse}; 'DESABILITADO' informa o usuário que ele não está controlando o \textit{mouse}; 'CALIBRANDO (FIQUE PARADO(A))' que informa o usuário que não deve se mover por que o VisiUMouse esta calibrando.
-
-No segundo momento é preciso clicar em 'calibrar' para calibrar o VisiUMouse, ou seja o usuário precisa ficar parado até receber o aviso que o modo está funcional, como visto na Figura \ref{fig:visiumouse-tela-captura-video}. Após a calibração o usuário é capaz de controlar o \textit{mouse} e para desabilitar o controle basta clicar em 'desabilitar' na tela principal, como visto na Figura \ref{fig:visiumouse-tela-principal}.
-
-\begin{figure}[H]
-\caption{Tela de captura de vídeo.} 
-\centering \includegraphics[scale=.45]{img/visiumouse-tela-captura-video.png}
-
-{\fontsize{11}{11}\selectfont \textbf{Fonte:} Elaborada pelo autor.}
-\label{fig:visiumouse-tela-captura-video}
-\end{figure}
-
 \chapter{AVALIAÇÃO}\label{CAP7}
 % Dissertação do vinicius: https://www.overleaf.com/read/gbykffbhwqtk#/42933380/
 % Capitulo 4 fala sobre os testes
@@ -551,11 +472,12 @@ O experimento foi executado por 9 participantes voluntário, com idade média de
 
 O teste foi dividido em 3 etapas: a primeira consistiu na aprendizagem de uso da aplicação, onde o participante era familiarizado com o funcionamento do VisiUMouse durante 5 minutos; a segunda etapa consistiu no experimento em si com o VisiUMouse; na última etapa, o participante utilizou o \textit{mouse} convencional para a execução das mesmas tarefas da etapa anterior. Os resultados são computados pelo \textit{software} do protocolo.
 
-Para as três etapas foi utilizado o clique por tempo, denominado \textit{dwell time}, segundo \citeonline{gips2000camera} \textbf{[RCC - não entendi esse "segundo fulano". Não foi definido o que é Dweel time anteriormente? E ficando assim no meio da explicação do teste, fica estranha citação]}, configurado para o tempo 5 segundos para efetuar o clique. Cabe ressaltar que em paralelo ao desenvolvimento do VisiUMouse foi criado um \textit{software} de clique por tempo para ser usado nos testes\footnote{Software de clique por tempo. Disponível em: http://visiumouse.com}. As demais configurações do VisiUMouse como velocidade foram mantidas iguais em todos os testes.  
+Para as três etapas foi utilizado o clique por tempo, ou seja, 
+o clique é gerado depois de 5 segundos com o cursor do \textit{mouse} na mesma posição. Cabe ressaltar que em paralelo ao desenvolvimento do VisiUMouse foi criado um \textit{software} de clique por tempo para ser usado nos testes\footnote{Software de clique por tempo. Disponível em: http://visiumouse.com}. As demais configurações do VisiUMouse como velocidade foram mantidas iguais em todos os testes.  
 
 O experimento foi conduzido com um notebook (LG S460) equipado com Windows 10, processador 2,4GHz (i3), 4 GB RAM, monitor de 14 polegadas, resolução de 1366 x 768 píxeis e utilizou-se a \textit{webcam} do próprio computador.
 
-O interesse do experimento é em nível de protótipo, para tentar garantir que o desenvolvimento está no caminho certo, e para avaliar se o produto final atende ao público-alvo, porém quando se trata de pessoas com deficiência motora, no primeiro momento é necessário uma rodada de testes com pessoas sem nenhuma deficiência, conforme \cite{stone2005user} \textbf{[RCC - de novo, ficou estranha essa citação no meio da explicação.]}, para que os testes com o público-alvo já estejam cuidadosamente planejados e refinados. Além de buscar, com os profissionais da área de Terapia Ocupacional, conforme \cite{oliveira2015uso}, aspectos multidisciplinares relacionados a prescrição, habilidades e necessidades dos usuários.
+O interesse do experimento é em nível de protótipo, para tentar garantir que o desenvolvimento está no caminho certo, e para avaliar se o produto final atende ao público-alvo, porém quando se trata de pessoas com deficiência motora, no primeiro momento é necessário uma rodada de testes com pessoas sem nenhuma deficiência, conforme \cite{stone2005user}, para que os testes com o público-alvo já estejam cuidadosamente planejados e refinados. Além de buscar, com os profissionais da área de Terapia Ocupacional, conforme \cite{oliveira2015uso}, aspectos multidisciplinares relacionados a prescrição, habilidades e necessidades dos usuários.
 
 \section{Resultados alcançados}\label{Sub:resultados-ex-1}
 A Figura \ref{fig:assertividade} apresenta o gráfico dos resultados da assertividade dos cliques nos alvos. O software VisiUMouse (VUM, em azul) teve assertividade média de 99,63\%, representando apenas um erro com o participante 8. O \textit{mouse} comum (Mouse, em laranja) teve assertividade de 100\%, que já era esperado devido a grande familiaridade que os usuários já tinham com este dispositivo.
@@ -591,7 +513,7 @@ Além disso a avaliação apontou a TZNM como um método favorável para o contr
 \chapter{Conclusões}\label{CAP-consideracoes-finais-trabalhos-futuros}
 Esse trabalho apresentou o desenvolvimento do VisiUMouse, que é uma tecnologia que permite o uso do computador para pessoas com deficiência física, para isso é feito o rastreamento dos olhos do usuário e convertido seus movimentos no movimento do cursor do \textit{mouse}, além disso o VisiUMouse permite vários tipos de cliques. O VisiUMouse apresenta uma interface de configuração simples e prática, que proporciona ajustes para melhor adaptação do usuário. Atualmente o VisiUMouse está na versão 1.2.6 e acessível para qualquer pessoa.
 
-Tendo em vista os objetivos alcançado, como: \textbf{desenvolver uma TA com base em VC (objetivo principal)}, \textbf{desenvolver um site}, \textbf{criar um instalador}, \textbf{garantir que o VisiUMouse tenha as principais funcionalidades de um mouse} e \textbf{Criar uma interface de configuração amigável e de utilização simples} e os resultados da avaliação é possível indicar que o trabalho esta no caminho correto, uma vez que a solução ficou dentro do desejado, porém ainda existem melhorias a serem feitas.
+Tendo em vista os objetivos alcançado, como: \textbf{desenvolver uma TA com base em VC (objetivo principal)}, \textbf{desenvolver um site}, \textbf{criar um instalador}, \textbf{garantir que o VisiUMouse tenha as principais funcionalidades de um \textit{mouse}} e \textbf{criar uma interface de configuração amigável e de utilização simples} e os resultados da avaliação é possível indicar que o trabalho esta no caminho correto, uma vez que a solução ficou dentro do desejado, porém ainda existem melhorias a serem feitas.
 
 \section{Trabalhos Futuros}
 

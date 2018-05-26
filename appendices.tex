@@ -1,34 +1,58 @@
+\chapter{TUTORIAL DO VISIUMOUSE}\label{CAP-tecnologia-visiumouse}
+Neste ponto é manifestado a visão do usuário final, desde o cadastro e entrada no site para fazer o \textit{download}, até a instalação e uso do VisiUMouse. 
+
+\section{Download do VisiUMouse}
+Para qualquer usuário que deseja fazer o \textit{download} do VisiUMouse é obrigatório o cadastro, caso não tenha se cadastrado antes, caso já tenha se cadastrado em um outro momento é preciso apenas efetuar a entrada (\textit{login}), para isso foi criado uma sessão no menu que corresponde a essas funcionalidades, a 'ENTRAR', na Figura \ref{fig:site-entrar} podemos ver essa opção no canto superior direito, marcado com vermelho. Ao clicar nessa opção o usuário vai entrar na página, como mostrado em 'Página de entrada', a qual ele pode inserir seus dados para entrar no site, porém caso ele não tenha se cadastrado ele pode clicar em 'CADASTRAR', ainda na mesma página, após clicar em 'CADASTRAR' é carregado a página de cadastro, como mostrado na Figura \ref{fig:site-entrar} na 'Página de cadastro'. Para fazer o cadastro é necessário o usuário informar seus dados pessoais, se alguma informação estiver incorreta o próprio site vai indicar. 
+
+\begin{figure}[H]
+\caption{Páginas de cadastro e entrada de usuários do site.} 
+\centering \includegraphics[scale=0.45]{img/site-entrar.png}
+
+{\fontsize{11}{11}\selectfont \textbf{Fonte:} Elaborada pelo autor.}
+\label{fig:site-entrar}
+\end{figure}
+
+Após a entrada do usuário no site é possível fazer o \textit{download} do VisiUMouse, nessa página ele pode ver uma tabela com características de cada versão, como mostrado na Figura \ref{fig:site-download}.
+
+
+\section{Instalando o VisiUMouse}
+A instalação do VisiUMouse segue o padrão de outros instaladores de \textit{softwares} disponíveis no mercado, a primeira tela é de apresentação, explicando o que o instalador vai fazer e se o usuário concorda; uma tela onde é configurado a pasta onde o VisiUMouse vai ser instalado; uma tela para iniciar a instalação; e, por fim, uma tela avisando que o VisiUMouse já foi instalado, como mostrado na Figura \ref{fig:visiumouse-instalador}.
+
+\begin{figure}[H]
+\caption{Telas de instalação do VisiUMouse.} 
+\centering \includegraphics[scale=0.45]{img/software-instalador.png}
+
+{\fontsize{11}{11}\selectfont \textbf{Fonte:} Elaborada pelo autor.}
+\label{fig:visiumouse-instalador}
+\end{figure}
+
+\section{VisiUMouse}
+Após a instalação, o VisiUMouse pode ser executado através de um atalho que foi criado na área de trabalho. A primeira tela que renderizada é a tela principal da GUI, como vista na Figura \ref{fig:visiumouse-tela-principal}, é ela que tem os primeiros passos para iniciar o controle do movimento e clique do \textit{mouse}. No primeiro momento é preciso clicar no botão 'iniciar', para iniciar a \textit{webcam}.
+
+\begin{figure}[H]
+\caption{Tela principal do VisiUMouse.} 
+\centering \includegraphics[scale=.5]{img/visiumouse-tela-principal-v216.png}
+
+\textbf{Fonte:} Elaborada pelo autor.
+\label{fig:visiumouse-tela-principal}
+\end{figure}
+
+A inicialização da \textit{webcam} é dada pela tela de captura de vídeo, como visto na Figura \ref{fig:visiumouse-tela-captura-video}, ela permite que e o usuário tenha o retorno se ele esta posicionado no centro da tela, e se é possível rastrear seus olhos, os retângulos vermelho em volta dos olhos mostram o rastreamento dos olhos. Nessa tela o usuário pode ver o 'MODO' da aplicação, como visto no canto superior esquerdo da Figura, podendo dar 3 avisos: 'FUNCIONAL' mostrando que já é possível controlar o movimento do \textit{mouse}; 'DESABILITADO' informa o usuário que ele não está controlando o \textit{mouse}; 'CALIBRANDO (FIQUE PARADO(A))' que informa o usuário que não deve se mover por que o VisiUMouse esta calibrando.
+
+No segundo momento é preciso clicar em 'calibrar' para calibrar o VisiUMouse, ou seja o usuário precisa ficar parado até receber o aviso que o modo está funcional, como visto na Figura \ref{fig:visiumouse-tela-captura-video}. Após a calibração o usuário é capaz de controlar o \textit{mouse} e para desabilitar o controle basta clicar em 'desabilitar' na tela principal, como visto na Figura \ref{fig:visiumouse-tela-principal}.
+
+\begin{figure}[H]
+\caption{Tela de captura de vídeo.} 
+\centering \includegraphics[scale=.45]{img/visiumouse-tela-captura-video.png}
+
+{\fontsize{11}{11}\selectfont \textbf{Fonte:} Elaborada pelo autor.}
+\label{fig:visiumouse-tela-captura-video}
+\end{figure}
+
+
+
 \chapter{DOCUMENTAÇÃO CASO DE USO}
 \label{Apx:A}
-
-%antigo
-% \begin{longtable}{|l|l|}
-% \caption{Documentação Caso de Uso.} \label{tab:long} \\
-% \hline 
-% \multicolumn{1}{|c|}{\textbf{Nome do Caso de Uso}} & 
-% \multicolumn{1}{c|}{\textbf{Funcionamento do Software}} \\ \hline 
-% \endfirsthead
-% \hline
-% Caso de Uso Geral &  \\ \hline
-% Ator Principal & Portador da Deficiência Físico ou Motor \\ \hline
-% Ator Secundário & Responsável pelo usuário. \\ \hline
-% Resumo & Descreve o funcionamento do software. \\ \hline 
-% Pré-condições &  O computador com entrada de vídeo \\ \hline 
-%  Pós-condições&  \\ \hline
-%  Ações do Ator& Ações do Sistema \\ \hline
-%  1.	Executar o Software&  \\ \hline
-%  &  2.	Inicialização\\ \hline
-%  3.	Posicionamento do Usuário&  \\ \hline
-%  & 4.	Reconhecimento da face  \\ \hline
-%  & 5.	Feedback do reconhecimento \\ \hline
-%  & 6.	Rastreio da face \\ \hline
-%  & 7.	Controle do mouse \\ \hline
-% 8.	Movimento da cabeça &  \\ \hline
-%  &  9.	Movimento do mouse\\ \hline
-% \end{longtable}
-
-%------------------------- fazendo
-
 \begin{longtable}{|l|l|}
 \caption{Documentação Caso de Uso \textit{Iniciar aplicação}.} \label{tab:dcu-1} \\
 \hline 
