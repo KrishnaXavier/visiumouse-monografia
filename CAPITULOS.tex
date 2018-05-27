@@ -231,7 +231,7 @@ VisiUMouse é um projeto que tem como objetivo principal a utilização de compu
 \end{figure}
 
 
-Do lado direito é possível ver o Usuário posicionado a frente da \textit{Webcam}, a qual é responsável por capturar vídeo deste Usuário. Para cada captura (ou \textit{frame}) do vídeo é enviado um conjunto de dados para o VisiUMouse, como entrada de dados que será processado pela aplicação. Após a leitura dos dados é iniciado o processo de rastreamento dos olhos, representado por 'rastrear olhos'. Em seguida ao rastreamento é feita uma análise que interpreta o movimento/deslocamento dos olhos do usuário, como podemos ver em 'interpretar movimento'. Por fim, o movimento dos olhos do usuário é retratado no controle do movimento do \textit{mouse}, representado por 'controle mouse'.
+Do lado direito é possível ver o Usuário posicionado a frente da \textit{Webcam}, a qual é responsável por capturar vídeo deste Usuário. Para cada captura (ou \textit{frame}) do vídeo é enviado um conjunto de dados para o VisiUMouse, como entrada de dados que será processado pela aplicação. Após a leitura dos dados é iniciado o processo de rastreamento dos olhos, representado por 'rastrear olhos'. Em seguida ao rastreamento é feita uma análise que interpreta o movimento/deslocamento dos olhos do Usuário, como podemos ver em 'interpretar movimento'. Por fim, o movimento dos olhos do Usuário é retratado no controle do movimento do \textit{mouse}, representado por 'controle mouse'.
 
 
 O processo de \textit{Machine Learning} é utilizado para reconhecer padrões de formas de objetos. Neste caso foi para rastrear olhos humanos, sendo  necessário utilizar um banco de dados com grande volume de imagens de olhos que gerou um arquivo XML com estes padrões. Com o arquivo XML que contêm os padrões foram utilizados os conceitos do algoritmo de Viola-Jones para fazer o processo de rastreamento \cite{viola2001rapid}. Este arquivo XML contém os padrões e características, denominados \textit{haar features}, que consistem em uma lista de padrões e características invariantes de um determinado objeto.
@@ -304,7 +304,7 @@ Quantidade de Objetos Rastreados:                   & 2                         
 \end{table}
 
 \begin{enumerate}
-\item \textbf{Clique por Tempo}: os dispositivos de TA com base em vídeo geralmente utilizam a técnica do clique do \textit{mouse} para simplificar o uso, esta técnica consiste em deixar o cursor do \textit{mouse} parado por um determinado tempo para gerar o clique na mesma posição que o curso está. Apesar de o clique por tempo ser comumente utilizado pode influenciar no desempenho do usuário em executar tarefas no computador que necessitam ser rápidas, como jogos. O VisiUMouse faz o rastreamento dos olhos permitindo implementar uma funcionalidade de clique pelo piscar dos olhos. 
+\item \textbf{Clique por Tempo}: os dispositivos de TA com base em vídeo geralmente utilizam a técnica do clique por tempo do \textit{mouse} para simplificar o uso, esta técnica consiste em deixar o cursor do \textit{mouse} parado por um determinado tempo para gerar o clique na mesma posição que o curso está. Apesar de o clique por tempo ser comumente utilizado pode influenciar no desempenho do usuário em executar tarefas no computador que necessitam ser rápidas, como jogos. O VisiUMouse faz o rastreamento dos olhos permitindo implementar uma funcionalidade de clique pelo piscar dos olhos. 
 
 \item \textbf{Tipos de Cliques}: este atributo representa a variedade de tipos de clique e funcionalidade do \textit{mouse} que a tecnologia apresenta, entre eles estão o clique primário (comumente o botão esquerdo do \textit{mouse}), clique secundário (comumente o botão direito do \textit{mouse}), a funcionalidade de arrastar etc.
 
@@ -319,7 +319,7 @@ Quantidade de Objetos Rastreados:                   & 2                         
 
 \section{Site}\label{sub:visiumouse-objtivo-site}
 Além do \textit{software} do VisiUMouse foi desenvolvido um site com o objetivo de facilitar a disponibilização da solução, registrar os usuários do VisiUMouse e captar seus dados de contato. 
-No site é disponibilizado o VisiUMouse para \textit{download}, o usuário tem acesso a todas as versões, além de ser capaz ver as características de cada versão e suas respectivas compatibilidades. O VisiUMouse é disponibilizado no formato de um instalador, que facilita a instalação no computador do usuário. A Figura \ref{fig:site-download} mostra a página no site que o usuário acesso para fazer o \textit{download} do VisiUMouse.
+No site é disponibilizado o VisiUMouse para \textit{download}, o usuário tem acesso a todas as versões, além de ver as características de cada versão e suas respectivas compatibilidades. O VisiUMouse é disponibilizado no formato de um instalador, que facilita a instalação no computador do usuário. A Figura \ref{fig:site-download} mostra a página no site que o usuário acessa para fazer o \textit{download} do VisiUMouse.
 
 
 \begin{figure}[H]
@@ -336,9 +336,9 @@ No site é disponibilizado o VisiUMouse para \textit{download}, o usuário tem a
 
 A importância do Design está no desenvolvimento de produtos (digitais ou físicos). O Design pode dar destaque a um produto com as mesmas funcionalidades e preço de outro produto. Assim como um Design bem pensado desperta o desejo dos consumidores, um Design pobre e mal feito gera uma repulsa enorme \cite{patterson2017computer}.
 
-Este seção destaca o Design da Interface e do site do VisiUMouse. O VisiUMouse é uma tecnologia \textit{desktop} executada pelo usuário na área de trabalho do computador, permitindo que ele controle o computador; o site é o responsável por apresentar e disponibilizar o VisiUMouse na \textit{Web} para os usuários, entre outras funcionalidades.
+Esta seção destaca o Design da Interface do \textit{software} do VisiUMouse e do site. O VisiUMouse é uma tecnologia \textit{desktop} executada pelo usuário na área de trabalho do computador, permitindo que ele controle o computador; o site é o responsável por apresentar e disponibilizar o VisiUMouse na \textit{Web} para os usuários, entre outras funcionalidades.
 
-\subsection{Design da Interface Desenvolvida}\label{Sub:software}
+\subsection{Design da Interface do Software}\label{Sub:software}
 Para a criação da interface foram utilizados os conceitos de CRAP (Contraste, Repetição, Alinhamento e Proximidade),de acordo com \citeonline{williams2005design}. A escolha da paleta de cores foi definida através de um levantamento das principais cores das tecnologias digitais atuais, foi feito uma pequena alteração nesta paleta para torná-la única e por consequência uma característica da própria tecnologia, as outras estilizações como sombra e tipografia foram definidas através das tendências atuais. Além de seguir boas práticas de \textit{Graphical User Interface} (GUI) para pessoas com pouca mobilidade, por exemplo botões grandes e mais afastados. A Figura \ref{fig:interface-tecnologia} mostra a tela principal do \textit{software} VisiUMouse.
 
 \begin{figure}[htbp]
@@ -361,6 +361,16 @@ O desenvolvimento do site tem como objetivo disponibilizar todo o conteúdo refe
 \item \textit{Funcionamento}: apresenta uma explicação resumida de como utilizar o VisiUMouse;
 
 \item \textit{Contato}: nessa seção é possível enviar uma mensagem para os idealizadores da solução VisiUMouse.
+
+\item \textit{Download}: página onde estão as versões do VisiUMouse para baixar, no formato de um instalador, para facilitar a instalação do \textit{software} no computador do usuário.
+
+\item \textit{Como usar}: mostra um pequeno tutorial de como utilizar o VisiUMouse.
+
+\item \textit{AJUDAR}: página destinada a pessoas que gostariam de colaborar com o projeto financeiramente.
+
+\item \textit{ENTRAR}: página responsável por fazer o cadastro e \textit{login} do usuário no site.
+
+
 \end{enumerate}
 
 
